@@ -8,18 +8,41 @@ public class WeryfikacjaTozsamosci {
 	public IStrategiaZabezpieczenia _unnamed_IStrategiaZabezpieczenia_;
 
 	public WeryfikacjaTozsamosci(IModel aModel) {
-		throw new UnsupportedOperationException();
+		this._model = aModel;
 	}
 
 	public boolean weryfikujPin(String aPin) {
-		throw new UnsupportedOperationException();
-	}
+		System.out.println("--- [PU01] Rozpoczęto Weryfikację Tożsamości ---");
+        
+        // Symulacja: Prawdziwy PIN to "1234"
+        String poprawnyPin = "1234"; 
+
+        if (aPin.equals(poprawnyPin)) {
+            System.out.println("--- [PU01] PIN poprawny. Dostęp przyznany. ---");
+            _licznikProb = 0;
+            return true;
+        } else {
+            _licznikProb++;
+            System.out.println("--- [PU01] Błąd! Niepoprawny PIN. Próba: " + _licznikProb + "/5 ---");
+            
+            if (_licznikProb >= 5) {
+                wykonajZabezpieczenie();
+            }
+            return false;
+        }
+    }
 
 	public void ustawStrategie(IStrategiaZabezpieczenia aS) {
-		throw new UnsupportedOperationException();
+		this._strategia = aS;
 	}
 
 	private void wykonajZabezpieczenie() {
-		throw new UnsupportedOperationException();
+		System.out.println("!!! WYKRYTO ZAGROŻENIE !!!");
+        
+        if (_strategia == null) {
+            
+            _strategia = new ZablokowanieKarty(_model); 
+        }
+        _strategia.wykonajReakcje(100); 
 	}
 }

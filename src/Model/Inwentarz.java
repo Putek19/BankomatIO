@@ -5,7 +5,7 @@ public class Inwentarz {
 	private Klient[] _klienci = null;
 
 	public Inwentarz(IDAO aDao) {
-		throw new UnsupportedOperationException();
+		this._dao = aDao;
 	}
 
 	public Klient dajKlienta(int aNrKlienta) {

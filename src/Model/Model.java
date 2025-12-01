@@ -6,15 +6,17 @@ public class Model implements IModel {
 	private IDAO _dao;
 
 	public Model(Inwentarz aInwentarz, IDAO aDao) {
-		throw new UnsupportedOperationException();
+		this._inwentarz = aInwentarz;
+		this._dao = aDao;
 	}
 
+	@Override
 	public void zarejestrujZdarzenie(String aOpis) {
-		throw new UnsupportedOperationException();
+		_dao.dodajWpisDoRejestruZdarzen(aOpis);
 	}
 
 	public String pobierzDaneKarty(int aId) {
-		throw new UnsupportedOperationException();
+		return _dao.znajdzKlienta(aId);
 	}
 
 	public boolean sprawdzPin(int aId, String aPin) {
