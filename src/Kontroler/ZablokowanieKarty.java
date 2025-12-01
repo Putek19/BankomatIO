@@ -4,10 +4,11 @@ import Model.IModel;
 public class ZablokowanieKarty extends IStrategiaZabezpieczenia {
 
 	public ZablokowanieKarty(IModel aModel) {
-		throw new UnsupportedOperationException();
+		super(aModel);
 	}
 
 	public void wykonajReakcje(int aIdKarty) {
-		throw new UnsupportedOperationException();
+		_model.zablokujKarte(aIdKarty);
+		_model.zarejestrujZdarzenie("Zablokowano kartę jako reakcję zabezpieczenia: " + aIdKarty);
 	}
 }

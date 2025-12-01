@@ -4,7 +4,11 @@ import Model.IModel;
 public abstract class IStrategiaZabezpieczenia {
 	protected IModel _model;
 
+	public IStrategiaZabezpieczenia(IModel aModel) {
+		_model = aModel;
+	}
+
 	public void wykonajReakcje(int aIdObiektu) {
-		throw new UnsupportedOperationException();
+		_model.zarejestrujZdarzenie("Wykonano reakcję zabezpieczenia dla obiektu: " + aIdObiektu);
 	}
 }

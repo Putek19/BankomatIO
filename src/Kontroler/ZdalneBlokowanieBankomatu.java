@@ -4,10 +4,11 @@ import Model.IModel;
 public class ZdalneBlokowanieBankomatu extends IStrategiaZabezpieczenia {
 
 	public ZdalneBlokowanieBankomatu(IModel aModel) {
-		throw new UnsupportedOperationException();
+		super(aModel);
 	}
 
 	public void wykonajReakcje(int aIdBankomatu) {
-		throw new UnsupportedOperationException();
+		_model.zablokujBankomat();
+		_model.zarejestrujZdarzenie("Zdalne zablokowanie bankomatu: " + aIdBankomatu);
 	}
 }

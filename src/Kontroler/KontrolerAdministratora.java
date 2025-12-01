@@ -3,20 +3,24 @@ import Model.IModel;
 
 public class KontrolerAdministratora implements IKontrolerAdminstratora {
 	private IModel _model;
+	private MonitorowanieBezpieczenstwa _monitorowanie;
 
 	public KontrolerAdministratora(IModel aModel) {
-		throw new UnsupportedOperationException();
+		_model = aModel;
+		_monitorowanie = new MonitorowanieBezpieczenstwa(aModel);
 	}
 
 	public void monitorowanieBezpieczenstwa() {
-		throw new UnsupportedOperationException();
+		_monitorowanie.rozpocznijMonitoring();
+		_model.zarejestrujZdarzenie("Rozpoczęto monitoring bezpieczeństwa");
 	}
 
 	public void zdalneBlokowanieBankomatu() {
-		throw new UnsupportedOperationException();
+		_model.zablokujBankomat();
+		_model.zarejestrujZdarzenie("Zdalne zablokowanie bankomatu przez administratora");
 	}
 
 	public void zarzadzanieGotowka() {
-		throw new UnsupportedOperationException();
+		_model.zarejestrujZdarzenie("Zarządzanie gotówką w bankomacie");
 	}
 }

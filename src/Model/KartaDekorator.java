@@ -1,17 +1,31 @@
 package Model;
 
+import java.math.BigDecimal;
+
 public abstract class KartaDekorator implements IKarta {
 	protected IKarta _karta;
 
 	public KartaDekorator(IKarta aKarta) {
-		throw new UnsupportedOperationException();
+		_karta = aKarta;
 	}
 
 	public int dajId() {
-		throw new UnsupportedOperationException();
+		return _karta.dajId();
 	}
 
 	public boolean sprawdzPin(String aPin) {
-		throw new UnsupportedOperationException();
+		return _karta.sprawdzPin(aPin);
+	}
+
+	public BigDecimal pobierzSaldo() {
+		return _karta.pobierzSaldo();
+	}
+
+	public void zmienSaldo(BigDecimal aKwota) {
+		_karta.zmienSaldo(aKwota);
+	}
+
+	public boolean czyZablokowana() {
+		return _karta.czyZablokowana();
 	}
 }

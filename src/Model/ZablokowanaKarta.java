@@ -6,26 +6,30 @@ public class ZablokowanaKarta extends KartaDekorator {
 
 	public ZablokowanaKarta(IKarta aKarta, String aData) {
 		super(aKarta);
-		throw new UnsupportedOperationException();
+		_dataBlokady = aData;
 	}
 
 	public boolean czyZablokowana() {
-		throw new UnsupportedOperationException();
+		return true;
 	}
 
 	public int dajId() {
-		throw new UnsupportedOperationException();
+		return _karta.dajId();
 	}
 
 	public boolean sprawdzPin(String aPin) {
-		throw new UnsupportedOperationException();
+		return false; // Zablokowana karta nie może weryfikować PIN
 	}
 
 	public BigDecimal pobierzSaldo() {
-		throw new UnsupportedOperationException();
+		return _karta.pobierzSaldo();
 	}
 
 	public void zmienSaldo(BigDecimal aKwota) {
-		throw new UnsupportedOperationException();
+		// Zablokowana karta nie może zmieniać salda
+	}
+
+	public String dajDateBlokady() {
+		return _dataBlokady;
 	}
 }
