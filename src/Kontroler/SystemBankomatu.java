@@ -13,8 +13,9 @@ public class SystemBankomatu {
 		// Utworzenie przykładowego klienta
 		Formularz formularz = new Formularz("Jan", "Kowalski", 123456789);
 		FabrykaKlienta fabryka = new FabrykaKlienta();
-		Klient klient = fabryka.stworzKontoKlienta(formularz);
+		IKlient klient = fabryka.stworzKontoKlienta(formularz);
 		inwentarz.dodajKlienta(klient);
+		inwentarz.dajKlienta(1);
 		
 		// Utworzenie przykładowej karty
 		Karta karta = new Karta(1, "1234", new java.math.BigDecimal("1000.00"));

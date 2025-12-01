@@ -17,7 +17,7 @@ public class Model implements IModel {
 	}
 
 	public String pobierzDaneKarty(int aId) {
-		for (Klient klient : _inwentarz.pobierzWszystkichKlientow()) {
+		for (IKlient klient : _inwentarz.pobierzWszystkichKlientow()) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aId);
 				if (karta != null) {
@@ -29,7 +29,7 @@ public class Model implements IModel {
 	}
 
 	public boolean sprawdzPin(int aId, String aPin) {
-		for (Klient klient : _inwentarz.pobierzWszystkichKlientow()) {
+		for (IKlient klient : _inwentarz.pobierzWszystkichKlientow()) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aId);
 				if (karta != null) {
@@ -41,7 +41,7 @@ public class Model implements IModel {
 	}
 
 	public BigDecimal sprawdzSaldo(int aId) {
-		for (Klient klient : _inwentarz.pobierzWszystkichKlientow()) {
+		for (IKlient klient : _inwentarz.pobierzWszystkichKlientow()) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aId);
 				if (karta != null) {
@@ -53,7 +53,7 @@ public class Model implements IModel {
 	}
 
 	public void aktualizujSaldo(int aId, BigDecimal aKwota) {
-		for (Klient klient : _inwentarz.pobierzWszystkichKlientow()) {
+		for (IKlient klient : _inwentarz.pobierzWszystkichKlientow()) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aId);
 				if (karta != null) {
@@ -66,7 +66,7 @@ public class Model implements IModel {
 	}
 
 	public void zablokujKarte(int aId) {
-		for (Klient klient : _inwentarz.pobierzWszystkichKlientow()) {
+		for (IKlient klient : _inwentarz.pobierzWszystkichKlientow()) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aId);
 				if (karta != null && karta instanceof Karta) {
@@ -90,7 +90,7 @@ public class Model implements IModel {
 	}
 
 	public void usuniecieKarty(int aIdKarty) {
-		for (Klient klient : _inwentarz.pobierzWszystkichKlientow()) {
+		for (IKlient klient : _inwentarz.pobierzWszystkichKlientow()) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aIdKarty);
 				if (karta != null) {

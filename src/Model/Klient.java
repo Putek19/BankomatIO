@@ -3,7 +3,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Klient {
+public class Klient implements IKlient {
 	private int _nrKlienta;
 	private String _imie;
 	private String _nazwisko;

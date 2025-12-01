@@ -5,16 +5,17 @@ import java.util.List;
 
 public class Inwentarz {
 	private IDAO _dao;
-	private List<Klient> _klienci;
+	private List<IKlient> _klienci;
 
 	public Inwentarz(IDAO aDao) {
 		_dao = aDao;
-		_klienci = new ArrayList<Klient>();
+		_klienci = new ArrayList<IKlient>();
 	}
 
-	public Klient dajKlienta(int aNrKlienta) {
-		for (Klient klient : _klienci) {
+	public IKlient dajKlienta(int aNrKlienta) {
+		for (IKlient klient : _klienci) {
 			if (klient != null && klient.dajNrKlienta() == aNrKlienta) {
+				System.out.println("Znaleziono klienta: " + klient.dajNrKlienta()+ klient.dajImie()+ klient.dajNazwisko()+ klient.dajPesel());
 				return klient;
 			}
 		}
@@ -22,7 +23,7 @@ public class Inwentarz {
 	}
 
 	public void usunKlienta(int aNrKlienta) {
-		Klient klient = dajKlienta(aNrKlienta);
+		IKlient klient = dajKlienta(aNrKlienta);
 		if (klient != null) {
 			_klienci.remove(klient);
 			_dao.usunKlienta(aNrKlienta);
@@ -31,7 +32,7 @@ public class Inwentarz {
 
 	public void zablokujKarte(int aIdKarty) {
 		_dao.zmianaBlokadyKarty(aIdKarty);
-		for (Klient klient : _klienci) {
+		for (IKlient klient : _klienci) {
 			if (klient != null) {
 				IKarta karta = klient.pobierzKarte(aIdKarty);
 				if (karta != null) {
@@ -41,11 +42,11 @@ public class Inwentarz {
 		}
 	}
 
-	public List<Klient> pobierzWszystkichKlientow() {
+	public List<IKlient> pobierzWszystkichKlientow() {
 		return _klienci;
 	}
 
-	public void dodajKlienta(Klient aKlient) {
+	public void dodajKlienta(IKlient aKlient) {
 		if (aKlient != null) {
 			_klienci.add(aKlient);
 		}
