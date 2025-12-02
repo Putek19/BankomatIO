@@ -12,24 +12,12 @@ public class WeryfikacjaTozsamosci {
 	}
 
 	public boolean weryfikujPin(String aPin) {
-		System.out.println("--- [PU01] Rozpoczęto Weryfikację Tożsamości ---");
-        
-        // Symulacja: Prawdziwy PIN to "1234"
-        String poprawnyPin = "1234"; 
-
-        if (aPin.equals(poprawnyPin)) {
-            System.out.println("--- [PU01] PIN poprawny. Dostęp przyznany. ---");
-            _licznikProb = 0;
-            return true;
-        } else {
-            _licznikProb++;
-            System.out.println("--- [PU01] Błąd! Niepoprawny PIN. Próba: " + _licznikProb + "/5 ---");
-            
-            if (_licznikProb >= 5) {
-                wykonajZabezpieczenie();
-            }
-            return false;
+		System.out.println("Szkielet weryfikacji PIN – zawsze zwraca false");
+        _licznikProb++;
+        if (_licznikProb > 3 && _strategia != null) {
+            wykonajZabezpieczenie();
         }
+        return false;
     }
 
 	public void ustawStrategie(IStrategiaZabezpieczenia aS) {
@@ -37,12 +25,9 @@ public class WeryfikacjaTozsamosci {
 	}
 
 	private void wykonajZabezpieczenie() {
-		System.out.println("!!! WYKRYTO ZAGROŻENIE !!!");
-        
-        if (_strategia == null) {
-            
-            _strategia = new ZablokowanieKarty(_model); 
+		System.out.println("Wywołano szkielet zabezpieczenia weryfikacji tożsamości.");
+        if (_strategia != null) {
+            _strategia.wykonajReakcje(0); // identyfikator obiektu
         }
-        _strategia.wykonajReakcje(100); 
-	}
+    }
 }

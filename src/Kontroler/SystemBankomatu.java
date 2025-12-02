@@ -9,27 +9,41 @@ import Model.Model;
 public class SystemBankomatu {
 
     public static void main(String[] args) {
-        System.out.println("=== START SYSTEMU BANKOMATU (SYMULACJA) ===\n");
-
-        // 1. Inicjalizacja warstwy Modelu (Symulacja Bazy Danych)
+        // 1) Przygotowanie danych i podstawowych obiektów modelu
         IDAO dao = new DAO();
         Inwentarz inwentarz = new Inwentarz(dao);
         IModel model = new Model(inwentarz, dao);
 
-        // 2. Inicjalizacja warstwy Kontrolera
+        // 2) Utworzenie kontrolerów warstwy kontroli
         IKontrolerKlienta kontrolerKlienta = new KontrolerKlienta(model);
+        IKontrolerAdminstratora kontrolerAdministratora = new KontrolerAdministratora(model);
 
-        // 3. SCENARIUSZ A: Poprawna weryfikacja
-        System.out.println("\n--- [SCENARIUSZ A] Poprawne logowanie ---");
-        kontrolerKlienta.weryfikacjaTozsamosci(); // W środku zasymulowany poprawny PIN
+        System.out.println("START TESTOWEGO DZIAŁANIA SYSTEMU BANKOMATU");
 
-        // 4. SCENARIUSZ B: Atak (Błędne PIN-y -> Blokada)
-        System.out.println("\n--- [SCENARIUSZ B] Próba ataku (Wielokrotny błąd) ---");
-        // Symulujemy sytuację, gdzie kontroler wymusza błędy
-        // W prawdziwej aplikacji byłaby to pętla w UI, tu symulujemy wywołanie metody "błędnej"
-        ((KontrolerKlienta) kontrolerKlienta).symulujAtakNaPin();
+        // 3) Testowe wywołanie operacji przypadku użycia – weryfikacja tożsamości
+        System.out.println("\nWeryfikacja tożsamości klienta");
+        try {
+            kontrolerKlienta.weryfikacjaTozsamosci();
+        } catch (UnsupportedOperationException ex) {
+            System.out.println("Operacja weryfikacji tożsamości nie jest jeszcze zaimplementowana.");
+        }
 
-        // 5. Koniec
-        System.out.println("\n=== KONIEC SYSTEMU ===");
+        // 4) Testowe wywołanie operacji – sprawdzenie stanu konta
+        System.out.println("\nSprawdzenie stanu konta");
+        try {
+            kontrolerKlienta.sprawdzenieStanuKonta();
+        } catch (UnsupportedOperationException ex) {
+            System.out.println("Operacja sprawdzenia stanu konta nie jest jeszcze zaimplementowana.");
+        }
+
+        // 5) Testowe wywołanie operacji administratora – zdalne blokowanie bankomatu
+        System.out.println("\nZdalne blokowanie bankomatu (administrator)");
+        try {
+            kontrolerAdministratora.zdalneBlokowanieBankomatu();
+        } catch (UnsupportedOperationException ex) {
+            System.out.println("Operacja zdalnego blokowania bankomatu nie jest jeszcze zaimplementowana.");
+        }
+
+        System.out.println("\nKONIEC TESTU");
     }
 }

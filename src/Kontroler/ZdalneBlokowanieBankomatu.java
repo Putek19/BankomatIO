@@ -4,7 +4,7 @@ import Model.IModel;
 public class ZdalneBlokowanieBankomatu extends IStrategiaZabezpieczenia {
 
 	public ZdalneBlokowanieBankomatu(IModel aModel) {
-		throw new UnsupportedOperationException();
+		this._model = aModel;
 	}
 
 	public void wykonajReakcje(int aIdBankomatu) {

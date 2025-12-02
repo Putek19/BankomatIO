@@ -3,45 +3,29 @@ import Model.IModel;
 
 public class KontrolerKlienta implements IKontrolerKlienta {
 	private IModel _model;
+    private WeryfikacjaTozsamosci _weryfikacja;
 
 	public KontrolerKlienta(IModel aModel) {
 		this._model = aModel;
+        this._weryfikacja = new WeryfikacjaTozsamosci(aModel);
 	}
 
-	@Override
+	
 	public void wyplataGotowki() {
-		String symulowanyPinUzytkownika = "1234";
-        int idKarty = 1; // Zakładamy, że karta nr 1 jest w czytniku
-
-        System.out.println("[KONTROLER] Użytkownik wprowadził PIN: " + symulowanyPinUzytkownika);
-
-        WeryfikacjaTozsamosci worker = new WeryfikacjaTozsamosci(_model);
-        boolean wynik = worker.weryfikujPin(symulowanyPinUzytkownika);
-
-        if (wynik) {
-            System.out.println("[WIDOK] Zalogowano pomyślnie.");
-        } else {
-            System.out.println("[WIDOK] Błąd logowania.");
-        }
+		System.out.println("Wywołano szkielet operacji: wyplataGotowki().");
+        
 	}
 
 	public void weryfikacjaTozsamosci() {
-		
+		System.out.println("Wywołano szkielet operacji: weryfikacjaTozsamosci().");
+        boolean wynik = _weryfikacja.weryfikujPin("0000");
+        System.out.println("Wynik weryfikacji PIN (wartość testowa): " + wynik);
 	}
 
 	public void sprawdzenieStanuKonta() {
-		throw new UnsupportedOperationException();
+		System.out.println("Wywołano szkielet operacji: sprawdzenieStanuKonta().");
+        
 	}
-	public void symulujAtakNaPin() {
-        WeryfikacjaTozsamosci worker = new WeryfikacjaTozsamosci(_model);
-        int idKarty = 1;
-        String blednyPin = "0000";
-
-        // Symulujemy 5 błędnych prób z rzędu
-        for (int i = 0; i < 6; i++) {
-            System.out.println("[KONTROLER] Próba " + (i+1) + ": Wpisano PIN " + blednyPin);
-            worker.weryfikujPin(blednyPin);
-        }
-    }
+	
 
 }

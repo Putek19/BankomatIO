@@ -5,28 +5,42 @@ public class Karta implements IKarta {
 	private int _id;
 	private String _pin;
 	private boolean _zablokowana;
+	private BigDecimal _saldo;
 
 	public Karta(int aId, String aPin, BigDecimal aSaldo) {
-		throw new UnsupportedOperationException();
+		this._id = aId;
+		this._pin = aPin;
+		this._saldo = aSaldo;
+		this._zablokowana = false;
 	}
 
 	public int dajId() {
-		throw new UnsupportedOperationException();
+		return _id;
 	}
 
 	public BigDecimal pobierzSaldo() {
-		throw new UnsupportedOperationException();
+		return _saldo;
 	}
 
 	public void zmienSaldo(BigDecimal aKwota) {
-		throw new UnsupportedOperationException();
+		if (aKwota == null) {
+			return;
+		}
+		if (_saldo == null) {
+			_saldo = aKwota;
+		} else {
+			_saldo = _saldo.add(aKwota);
+		}
 	}
 
 	public boolean czyZablokowana() {
-		throw new UnsupportedOperationException();
+		return _zablokowana;
 	}
 
 	public boolean sprawdzPin(String aPin) {
-		throw new UnsupportedOperationException();
+		if (aPin == null) {
+			return false;
+		}
+		return _pin.equals(aPin);
 	}
 }

@@ -4,14 +4,14 @@ public abstract class KartaDekorator implements IKarta {
 	protected IKarta _karta;
 
 	public KartaDekorator(IKarta aKarta) {
-		throw new UnsupportedOperationException();
+		this._karta = aKarta;
 	}
 
 	public int dajId() {
-		throw new UnsupportedOperationException();
+		return _karta.dajId();
 	}
 
 	public boolean sprawdzPin(String aPin) {
-		throw new UnsupportedOperationException();
+		return _karta.sprawdzPin(aPin);
 	}
 }

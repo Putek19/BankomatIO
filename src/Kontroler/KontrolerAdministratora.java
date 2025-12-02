@@ -5,18 +5,21 @@ public class KontrolerAdministratora implements IKontrolerAdminstratora {
 	private IModel _model;
 
 	public KontrolerAdministratora(IModel aModel) {
-		throw new UnsupportedOperationException();
+		this._model = aModel;
 	}
 
 	public void monitorowanieBezpieczenstwa() {
-		throw new UnsupportedOperationException();
+		System.out.println("Wywołano szkielet operacji: monitorowanieBezpieczenstwa().");
+        
 	}
 
 	public void zdalneBlokowanieBankomatu() {
-		throw new UnsupportedOperationException();
+		System.out.println("Wywołano szkielet operacji: zdalneBlokowanieBankomatu().");
+        
 	}
 
 	public void zarzadzanieGotowka() {
-		throw new UnsupportedOperationException();
+		System.out.println("Wywołano szkielet operacji: zarzadzanieGotowka().");
+        
 	}
 }

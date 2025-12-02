@@ -6,26 +6,26 @@ public class ZablokowanaKarta extends KartaDekorator {
 
 	public ZablokowanaKarta(IKarta aKarta, String aData) {
 		super(aKarta);
-		throw new UnsupportedOperationException();
+		this._dataBlokady = aData;
 	}
 
 	public boolean czyZablokowana() {
-		throw new UnsupportedOperationException();
+		return true;
 	}
 
 	public int dajId() {
-		throw new UnsupportedOperationException();
+		return _karta.dajId();
 	}
 
 	public boolean sprawdzPin(String aPin) {
-		throw new UnsupportedOperationException();
+		return _karta.sprawdzPin(aPin);
 	}
 
 	public BigDecimal pobierzSaldo() {
-		throw new UnsupportedOperationException();
+		return _karta.pobierzSaldo();
 	}
 
 	public void zmienSaldo(BigDecimal aKwota) {
-		throw new UnsupportedOperationException();
+		_karta.zmienSaldo(aKwota);
 	}
 }

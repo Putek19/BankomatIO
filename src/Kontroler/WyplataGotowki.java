@@ -14,10 +14,10 @@ public abstract class WyplataGotowki {
 	}
 
 	private boolean sprawdzanieSaldaiGotowki() {
-		throw new UnsupportedOperationException();
+		return _model.sprawdzSaldo(0).doubleValue() >= _kwota;
 	}
 
 	private boolean zatwierdzenieWyplaty() {
-		throw new UnsupportedOperationException();
+		return true;
 	}
 }

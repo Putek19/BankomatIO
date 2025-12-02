@@ -7,29 +7,25 @@ public class DAO implements IDAO {
 	private List<String> tabelaKlientow = new ArrayList<>();
 
 	public DAO() {
-		tabelaKlientow.add("1;Jan;Kowalski;12345678901;100;1234;5000.00;false");
-        tabelaKlientow.add("2;Anna;Nowak;98765432109;101;0000;200.00;true");
+		
 		
 	}
 
 	public void dodajWpisDoRejestruZdarzen(String aZdarzenie) {
-		System.out.println("[BAZA DANYCH LOG] Zapisano zdarzenie: " + aZdarzenie);
 		
+		tabelaKlientow.add(aZdarzenie);
 	}
 
 	public String znajdzKlienta(int aNrKlienta) {
-		System.out.println("[DAO] Szukam w bazie klienta o ID: " + aNrKlienta);
-        for (String rekord : tabelaKlientow) {
-            if (rekord.startsWith(aNrKlienta + ";")) {
-                return rekord;
-            }
-        }
-        return null;
-		
+		if (aNrKlienta < 0 || aNrKlienta >= tabelaKlientow.size()) {
+			return null;
+		}
+		return tabelaKlientow.get(aNrKlienta);
 	}
 
 	public int dodajKlienta(String aKlient) {
-		throw new UnsupportedOperationException();
+		tabelaKlientow.add(aKlient);
+		return tabelaKlientow.size() - 1;
 	}
 
 	public void edytujKlienta(int aNrKlienta) {
