@@ -30,7 +30,7 @@ public class SystemBankomatu {
 		System.out.println("Saldo karty: " + model.sprawdzSaldo(1));
 		
 		// Test wypłaty
-		kontrolerKlienta.wyplataGotowki("1", "1234", 100.0);
+		kontrolerKlienta.wyplataGotowki("1", "1234", 150.0);
 		System.out.println("Saldo po wypłacie: " + model.sprawdzSaldo(1));
 		
 		// Test monitorowania

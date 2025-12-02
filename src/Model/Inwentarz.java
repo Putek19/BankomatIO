@@ -15,7 +15,7 @@ public class Inwentarz {
 	public IKlient dajKlienta(int aNrKlienta) {
 		for (IKlient klient : _klienci) {
 			if (klient != null && klient.dajNrKlienta() == aNrKlienta) {
-				System.out.println("Znaleziono klienta: " + klient.dajNrKlienta()+ klient.dajImie()+ klient.dajNazwisko()+ klient.dajPesel());
+				//System.out.println("Znaleziono klienta: " + klient.dajNrKlienta()+ klient.dajImie()+ klient.dajNazwisko()+ klient.dajPesel());
 				return klient;
 			}
 		}
