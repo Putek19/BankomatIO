@@ -1,4 +1,5 @@
 package Kontroler;
+
 import Model.IModel;
 
 public class WeryfikacjaTozsamosci {
@@ -14,14 +15,23 @@ public class WeryfikacjaTozsamosci {
 		_strategia = null;
 	}
 
-	public boolean weryfikujPin(String aPin) {
-		// Weryfikacja PIN 
+	public boolean weryfikujPin(int aIdKarty, String aPin) {
+		// Weryfikacja PIN
 		_licznikProb++;
 		if (_licznikProb >= MAKSYMALNA_LICZBA_PROB) {
-			wykonajZabezpieczenie();
+			wykonajZabezpieczenie(aIdKarty);
 			return false;
 		}
-		return true;
+
+		boolean czyPoprawny = _model.sprawdzPin(aIdKarty, aPin);
+		if (czyPoprawny) {
+			resetujLicznik();
+			_model.zarejestrujZdarzenie("Pomyślna weryfikacja tożsamości dla karty: " + aIdKarty);
+			return true;
+		} else {
+			_model.zarejestrujZdarzenie("Nieudana weryfikacja tożsamości dla karty: " + aIdKarty);
+			return false;
+		}
 	}
 
 	public void ustawStrategie(IStrategiaZabezpieczenia aS) {
@@ -29,11 +39,11 @@ public class WeryfikacjaTozsamosci {
 		_unnamed_IStrategiaZabezpieczenia_ = aS;
 	}
 
-	private void wykonajZabezpieczenie() {
+	private void wykonajZabezpieczenie(int aIdKarty) {
 		if (_strategia != null) {
-			_strategia.wykonajReakcje(0); // ID karty - w rzeczywistości powinno być przekazane
+			_strategia.wykonajReakcje(aIdKarty);
 		}
-		_model.zarejestrujZdarzenie("Przekroczono maksymalną liczbę prób weryfikacji PIN");
+		_model.zarejestrujZdarzenie("Przekroczono maksymalną liczbę prób weryfikacji PIN dla karty: " + aIdKarty);
 	}
 
 	public void resetujLicznik() {

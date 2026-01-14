@@ -20,6 +20,7 @@ public class DAO implements IDAO {
 
 	public void dodajWpisDoRejestruZdarzen(String aZdarzenie) {
 		_rejestrZdarzen.add(aZdarzenie);
+		System.out.println("[LOG] " + aZdarzenie);
 	}
 
 	public String znajdzKlienta(int aNrKlienta) {
@@ -33,9 +34,8 @@ public class DAO implements IDAO {
 	}
 
 	public void edytujKlienta(int aNrKlienta) {
-		// Implementacja edycji klienta
 		if (_klienci.containsKey(aNrKlienta)) {
-			// Logika edycji - w tym przypadku pozostawiamy bez zmian
+
 		}
 	}
 

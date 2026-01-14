@@ -1,4 +1,5 @@
 package Kontroler;
+
 import Model.IModel;
 
 public class KontrolerAdministratora implements IKontrolerAdminstratora {
@@ -12,7 +13,6 @@ public class KontrolerAdministratora implements IKontrolerAdminstratora {
 
 	public void monitorowanieBezpieczenstwa() {
 		_monitorowanie.rozpocznijMonitoring();
-		_model.zarejestrujZdarzenie("Rozpoczęto monitoring bezpieczeństwa");
 	}
 
 	public void zdalneBlokowanieBankomatu() {

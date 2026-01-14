@@ -1,4 +1,5 @@
 package Kontroler;
+
 import Model.IModel;
 
 public class ZdalneBlokowanieBankomatu extends IStrategiaZabezpieczenia {
@@ -9,6 +10,6 @@ public class ZdalneBlokowanieBankomatu extends IStrategiaZabezpieczenia {
 
 	public void wykonajReakcje(int aIdBankomatu) {
 		_model.zablokujBankomat();
-		_model.zarejestrujZdarzenie("Zdalne zablokowanie bankomatu: " + aIdBankomatu);
+		_model.zarejestrujZdarzenie("Bankomat zablokowany");
 	}
 }
