@@ -9,23 +9,17 @@ public class ZablokowanaKarta extends KartaDekorator {
 		this._dataBlokady = aData;
 	}
 
+	@Override
 	public boolean czyZablokowana() {
 		return true;
 	}
 
-	public int dajId() {
-		return _karta.dajId();
-	}
-
+	@Override
 	public boolean sprawdzPin(String aPin) {
-		return _karta.sprawdzPin(aPin);
+		return false;
 	}
 
-	public BigDecimal pobierzSaldo() {
-		return _karta.pobierzSaldo();
-	}
-
-	public void zmienSaldo(BigDecimal aKwota) {
-		_karta.zmienSaldo(aKwota);
+	public String getDataBlokady() {
+		return _dataBlokady;
 	}
 }

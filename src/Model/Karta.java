@@ -37,8 +37,16 @@ public class Karta implements IKarta {
 		return _zablokowana;
 	}
 
+	public void zablokuj() {
+		_zablokowana = true;
+	}
+
+	public void odblokuj() {
+		_zablokowana = false;
+	}
+
 	public boolean sprawdzPin(String aPin) {
-		if (aPin == null) {
+		if (aPin == null || _zablokowana) {
 			return false;
 		}
 		return _pin.equals(aPin);
