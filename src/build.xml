@@ -1,17 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="build">
+	<property name="junit.version" value="1.10.0"/>
+	<property name="lib.dir" value="lib"/>
+	<property name="test.dir" value="test"/>
+	<property name="test.classes.dir" value="${test.dir}/classes"/>
+	
 	<path id="build.classpath">
 		<pathelement location="classes"/>
+		<fileset dir="${lib.dir}">
+			<include name="*.jar"/>
+		</fileset>
 	</path>
+	
+	<path id="test.classpath">
+		<path refid="build.classpath"/>
+		<pathelement location="${test.classes.dir}"/>
+		<pathelement location="classes"/>
+	</path>
+	
 	<target name="init">
 		<mkdir dir="classes"/>
+		<mkdir dir="${test.dir}"/>
+		<mkdir dir="${test.classes.dir}"/>
+		<mkdir dir="${lib.dir}"/>
 	</target>
+	
+	<target name="download-junit" depends="init" unless="junit.downloaded">
+		<echo message="Pobieranie JUnit 5..."/>
+		<get src="https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/${junit.version}/junit-platform-console-standalone-${junit.version}.jar" 
+		     dest="${lib.dir}/junit-platform-console-standalone-${junit.version}.jar" 
+		     skipexisting="true"
+		     ignoreerrors="true"/>
+		<available file="${lib.dir}/junit-platform-console-standalone-${junit.version}.jar" property="junit.downloaded"/>
+	</target>
+	
 	<target name="clean">
 		<delete dir="classes"/>
+		<delete dir="${test.classes.dir}"/>
 	</target>
+	
 	<target depends="init" name="build">
-		<javac srcdir="." destdir="classes" source="1.4">
+		<javac srcdir="." destdir="classes" source="1.8" target="1.8" includeantruntime="false">
 			<classpath refid="build.classpath"/>
 		</javac>
+	</target>
+	
+	<target name="compile-tests" depends="build, download-junit">
+		<javac srcdir="${test.dir}" destdir="${test.classes.dir}" source="1.8" target="1.8" includeantruntime="false">
+			<classpath refid="test.classpath"/>
+		</javac>
+	</target>
+	
+	<target name="test" depends="compile-tests">
+		<java classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="true">
+			<classpath refid="test.classpath"/>
+			<arg value="--class-path"/>
+			<arg value="${test.classes.dir}"/>
+			<arg value="--scan-class-path"/>
+			<arg value="${test.classes.dir}"/>
+		</java>
 	</target>
 </project>
