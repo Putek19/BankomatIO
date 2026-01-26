@@ -2,9 +2,12 @@ package Model;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,8 +18,20 @@ import java.util.stream.Stream;
 
 @DisplayName("FabrykaKlientaTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("fabryka")
+@Tag("model")
 public class FabrykaKlientaTest {
 	private FabrykaKlienta fabryka;
+
+	@BeforeAll
+	public static void setUpBeforeClass() {
+		System.out.println("Rozpoczęcie testów klasy FabrykaKlienta");
+	}
+
+	@AfterAll
+	public static void tearDownAfterClass() {
+		System.out.println("Zakończenie testów klasy FabrykaKlienta");
+	}
 
 	@BeforeEach
 	public void setUp() {
@@ -31,6 +46,7 @@ public class FabrykaKlientaTest {
 	@Test
 	@Order(1)
 	@DisplayName("StworzKontoKlienta")
+	@Tag("tworzenie")
 	public void testStworzKontoKlienta() {
 		Formularz formularz = new Formularz("Jan", "Kowalski", 123456789);
 		IKlient klient = fabryka.stworzKontoKlienta(formularz);
@@ -44,6 +60,7 @@ public class FabrykaKlientaTest {
 	@Test
 	@Order(2)
 	@DisplayName("StworzKontoKlienta - NullFormularz")
+	@Tag("tworzenie")
 	public void testStworzKontoKlienta_NullFormularz() {
 		IKlient klient = fabryka.stworzKontoKlienta(null);
 		assertNull(klient);
@@ -52,6 +69,7 @@ public class FabrykaKlientaTest {
 	@Test
 	@Order(3)
 	@DisplayName("StworzKontoKlienta - UnikalneNumery")
+	@Tag("tworzenie")
 	public void testStworzKontoKlienta_UnikalneNumery() {
 		Formularz form1 = new Formularz("Jan", "Kowalski", 111111111);
 		Formularz form2 = new Formularz("Anna", "Nowak", 222222222);
@@ -68,6 +86,8 @@ public class FabrykaKlientaTest {
 	@Order(4)
 	@MethodSource("dostarczDaneKlientow")
 	@DisplayName("StworzKontoKlienta - PoprawneDane")
+	@Tag("tworzenie")
+	@Tag("parametryzowany")
 	public void testStworzKontoKlienta_PoprawneDane(String imie, String nazwisko, int pesel) {
 		Formularz formularz = new Formularz(imie, nazwisko, pesel);
 		IKlient klient = fabryka.stworzKontoKlienta(formularz);

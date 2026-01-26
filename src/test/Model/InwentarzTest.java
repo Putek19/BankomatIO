@@ -2,9 +2,12 @@ package Model;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,9 +17,21 @@ import java.util.List;
 
 @DisplayName("InwentarzTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("inwentarz")
+@Tag("model")
 public class InwentarzTest {
 	private Inwentarz inwentarz;
 	private DAO dao;
+
+	@BeforeAll
+	public static void setUpBeforeClass() {
+		System.out.println("Rozpoczęcie testów klasy Inwentarz");
+	}
+
+	@AfterAll
+	public static void tearDownAfterClass() {
+		System.out.println("Zakończenie testów klasy Inwentarz");
+	}
 
 	@BeforeEach
 	public void setUp() {
@@ -33,6 +48,7 @@ public class InwentarzTest {
 	@Test
 	@Order(1)
 	@DisplayName("Konstruktor")
+	@Tag("konstruktor")
 	public void testKonstruktor() {
 		assertNotNull(inwentarz);
 	}
@@ -40,6 +56,7 @@ public class InwentarzTest {
 	@Test
 	@Order(2)
 	@DisplayName("DodajKlienta")
+	@Tag("klient")
 	public void testDodajKlienta() {
 		IKlient klient = new Klient(1, "Jan");
 		inwentarz.dodajKlienta(klient);
@@ -51,6 +68,7 @@ public class InwentarzTest {
 	@Test
 	@Order(3)
 	@DisplayName("DodajKlienta - Null")
+	@Tag("klient")
 	public void testDodajKlienta_Null() {
 		assertDoesNotThrow(() -> inwentarz.dodajKlienta(null));
 	}
@@ -58,6 +76,7 @@ public class InwentarzTest {
 	@Test
 	@Order(4)
 	@DisplayName("DajKlienta - Istniejacy")
+	@Tag("klient")
 	public void testDajKlienta_Istniejacy() {
 		IKlient klient1 = new Klient(1, "Jan");
 		IKlient klient2 = new Klient(2, "Anna");
@@ -72,13 +91,16 @@ public class InwentarzTest {
 	@Test
 	@Order(5)
 	@DisplayName("DajKlienta - Nieistniejacy")
+	@Tag("klient")
 	public void testDajKlienta_Nieistniejacy() {
-		assertNull(inwentarz.dajKlienta(999));
+		IKlient pobrany = inwentarz.dajKlienta(999);
+		assertNull(pobrany);
 	}
 
 	@Test
 	@Order(6)
 	@DisplayName("UsunKlienta")
+	@Tag("klient")
 	public void testUsunKlienta() {
 		IKlient klient = new Klient(1, "Jan");
 		inwentarz.dodajKlienta(klient);
@@ -90,6 +112,7 @@ public class InwentarzTest {
 	@Test
 	@Order(7)
 	@DisplayName("UsunKlienta - Nieistniejacy")
+	@Tag("klient")
 	public void testUsunKlienta_Nieistniejacy() {
 		assertDoesNotThrow(() -> inwentarz.usunKlienta(999));
 	}
@@ -97,6 +120,7 @@ public class InwentarzTest {
 	@Test
 	@Order(8)
 	@DisplayName("PobierzWszystkichKlientow")
+	@Tag("klient")
 	public void testPobierzWszystkichKlientow() {
 		IKlient klient1 = new Klient(1, "Jan");
 		IKlient klient2 = new Klient(2, "Anna");
@@ -112,6 +136,7 @@ public class InwentarzTest {
 	@Test
 	@Order(9)
 	@DisplayName("PobierzWszystkichKlientow - Pusty")
+	@Tag("klient")
 	public void testPobierzWszystkichKlientow_Pusty() {
 		List<IKlient> klienci = inwentarz.pobierzWszystkichKlientow();
 		assertNotNull(klienci);
@@ -121,6 +146,7 @@ public class InwentarzTest {
 	@Test
 	@Order(10)
 	@DisplayName("ZablokujKarte")
+	@Tag("blokada")
 	public void testZablokujKarte() {
 		IKlient klient = new Klient(1, "Jan");
 		IKarta karta = new Karta(100, "1234", new BigDecimal("1000.00"));
