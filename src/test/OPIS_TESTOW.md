@@ -1,27 +1,25 @@
 # Opis Testów JUnit 5
 uruchomienie: cd src -> ./run-tests.sh
 
-## Spełnione wymagania instrukcji
-
 ### Zadanie 1 - Testy jednostkowe bez mockowania
-- ✅ Nazwy klas testów zawierają nazwę testowanej klasy + "Test"
-- ✅ `@DisplayName` - nazwa klasy i testów
-- ✅ `@Order`, `@TestMethodOrder` - kolejność testów
-- ✅ `@BeforeEach` (setUp) - przygotowanie danych
-- ✅ `@AfterEach` (tearDown) - sprzątanie po teście
-- ✅ `@BeforeAll` (setUpBeforeClass) - przygotowanie przed wszystkimi testami
-- ✅ `@AfterAll` (tearDownAfterClass) - sprzątanie po wszystkich testach
-- ✅ Komentarze etapów testów (jeśli/gdy/wtedy)
-- ✅ Min. 3 różne asercje: `assertEquals`, `assertNotEquals`, `assertTrue`, `assertFalse`, `assertNull`, `assertNotNull`, `assertDoesNotThrow`
-- ✅ Min. 2 różne sposoby parametryzacji: `@ValueSource`, `@CsvSource`, `@MethodSource`
+-Nazwy klas testów zawierają nazwę testowanej klasy + "Test"
+-`@DisplayName` - nazwa klasy i testów
+-`@Order`, `@TestMethodOrder` - kolejność testów
+- `@BeforeEach` (setUp) - przygotowanie danych
+- `@AfterEach` (tearDown) - sprzątanie po teście
+- `@BeforeAll` (setUpBeforeClass) - przygotowanie przed wszystkimi testami
+- `@AfterAll` (tearDownAfterClass) - sprzątanie po wszystkich testach
+- Komentarze etapów testów (jeśli/gdy/wtedy)
+- Min. 3 różne asercje: `assertEquals`, `assertNotEquals`, `assertTrue`, `assertFalse`, `assertNull`, `assertNotNull`, `assertDoesNotThrow`
+- Min. 2 różne sposoby parametryzacji: `@ValueSource`, `@CsvSource`, `@MethodSource`
 
 ### Zadanie 3 - Zestawy testów (Suite)
-- ✅ `SuiteModel.java` - zestaw testów warstwy Model (encji) - `@SelectPackages("Model")`
-- ✅ `SuiteKontroler.java` - zestaw testów warstwy Kontroler - `@SelectPackages("Kontroler")`
-- ✅ `SuiteEncje.java` - zestaw testów z tagiem "encja" bez tagów "blokada" - `@IncludeTags`, `@ExcludeTags`
-- ✅ `SuiteBezpieczenstwo.java` - zestaw testów z tagami "bezpieczenstwo"/"blokada" - `@IncludeTags`, `@ExcludeTags`
-- ✅ `@Tag` na wszystkich testach
-- ✅ `@Suite`, `@SuiteDisplayName`
+- `SuiteModel.java` - zestaw testów warstwy Model (encji) - `@SelectPackages("Model")`
+-  `SuiteKontroler.java` - zestaw testów warstwy Kontroler - `@SelectPackages("Kontroler")`
+- `SuiteEncje.java` - zestaw testów z tagiem "encja" bez tagów "blokada" - `@IncludeTags`, `@ExcludeTags`
+- `SuiteBezpieczenstwo.java` - zestaw testów z tagami "bezpieczenstwo"/"blokada" - `@IncludeTags`, `@ExcludeTags`
+- `@Tag` na wszystkich testach
+- `@Suite`, `@SuiteDisplayName`
 
 ## Użyte Tagi
 

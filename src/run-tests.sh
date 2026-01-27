@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Skrypt do uruchamiania testów JUnit 5 bez Apache Ant
-
 set -e
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "${SCRIPT_DIR}"
 
 JUNIT_VERSION="1.10.0"
 JUNIT_JAR="junit-platform-console-standalone-${JUNIT_VERSION}.jar"
