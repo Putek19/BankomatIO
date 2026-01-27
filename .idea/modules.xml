@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BankomatIO.iml" filepath="$PROJECT_DIR$/BankomatIO.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/BankomatIO1.iml" filepath="$PROJECT_DIR$/src/BankomatIO1.iml" />
     </modules>
   </component>

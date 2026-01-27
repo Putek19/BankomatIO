@@ -1,19 +1,6 @@
-# 📚 ŚCIĄGAWKA JUNIT 5 & MOCKITO - System Bankomatu
+# JUNIT 5 & MOCKITO - System Bankomatu
 
-## 🎯 Spis treści
-1. [Biblioteki i wersje](#biblioteki-i-wersje)
-2. [JUnit 5 - Podstawy](#junit-5---podstawy)
-3. [Mockito - Symulacje](#mockito---symulacje)
-4. [Adnotacje](#adnotacje)
-5. [Asercje](#asercje)
-6. [Testy parametryzowane](#testy-parametryzowane)
-7. [Zestawy testów](#zestawy-testów)
-8. [Struktura testów](#struktura-testów)
-9. [Wzorce i dobre praktyki](#wzorce-i-dobre-praktyki)
-
----
-
-## 📦 Biblioteki i wersje
+## Biblioteki i wersje
 
 ### JUnit 5 (Jupiter)
 - **Wersja**: 5.10.0
@@ -37,18 +24,14 @@
   - `mockito-core` - Podstawowa funkcjonalność
   - `mockito-junit-jupiter` - Integracja z JUnit 5
 
-### Biblioteki pomocnicze (Mockito)
-- **byte-buddy** (1.14.11) - Manipulacja bytecode dla Mockito
-- **objenesis** (3.3) - Tworzenie obiektów bez konstruktorów
-
 ---
 
-## 🧪 JUnit 5 - Podstawy
+## JUnit 5 
 
 ### Struktura klasy testowej
 
 ```java
-@DisplayName("NazwaTestu")                    // Czytelna nazwa testu
+@DisplayName("NazwaTestu")                   
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)  // Kolejność wykonania
 @Tag("kategoria")                             // Tagowanie testów
 public class NazwaKlasyTest {
@@ -101,7 +84,7 @@ public void tearDown() {
 
 ---
 
-## 🎭 Mockito - Symulacje
+## Mockito - Symulacje
 
 ### Podstawowe koncepcje
 
@@ -112,7 +95,7 @@ public void tearDown() {
 
 ### Tworzenie mocków
 
-#### Metoda 1: Adnotacje (zalecana w projekcie)
+#### Metoda 1: Adnotacje
 
 ```java
 @Mock
@@ -255,7 +238,7 @@ public void testRealizujWyplate_PoprawneDane() {
 
 ---
 
-## 📝 Adnotacje
+## Adnotacje
 
 ### Adnotacje JUnit 5
 
@@ -289,7 +272,7 @@ public void testRealizujWyplate_PoprawneDane() {
 
 ---
 
-## ✅ Asercje
+## Asercje
 
 ### Podstawowe asercje JUnit 5
 
@@ -329,7 +312,7 @@ assertThrows(RuntimeException.class, () ->
 
 ---
 
-## 🔄 Testy parametryzowane
+## Testy parametryzowane
 
 ### @ValueSource - jedna wartość
 
@@ -381,7 +364,7 @@ public void testZmienSaldo_DodatniaKwota(String kwotaStr, String oczekiwaneStr) 
 
 ---
 
-## 📦 Zestawy testów (Test Suites)
+## Zestawy testów (Test Suites)
 
 ### Struktura zestawu testów
 
@@ -525,7 +508,7 @@ public void testNazwa() {
 
 ---
 
-## 💡 Wzorce i dobre praktyki
+## Wzorce i praktyki
 
 ### 1. Nazywanie testów
 
@@ -660,7 +643,7 @@ inOrder.verify(mockModel).operacja3();
 
 ---
 
-## 🔧 Uruchamianie testów
+## Uruchamianie testów
 
 ### Z linii poleceń
 
@@ -695,7 +678,7 @@ mvn test -Dtest=SuiteBezpieczenstwo
 
 ---
 
-## 📊 Podsumowanie projektu
+## Podsumowanie projektu
 
 ### Statystyki testów
 
@@ -736,13 +719,13 @@ mvn test -Dtest=SuiteBezpieczenstwo
 
 ### Kiedy używać mocków?
 
-✅ **TAK**:
+**TAK**:
 - Testowana klasa zależy od trudnodostępnych zasobów (baza danych, API)
 - Chcesz przetestować obsługę błędów
 - Zależności są niestabilne lub wolne
 - Chcesz izolować testowaną logikę
 
-❌ **NIE**:
+**NIE**:
 - Testowanie prostych klas encji (POJO)
 - Klasy bez zależności
 - Gdy mock byłby bardziej skomplikowany niż rzeczywisty obiekt
@@ -758,18 +741,6 @@ mvn test -Dtest=SuiteBezpieczenstwo
 
 ---
 
-## 📖 Dodatkowe zasoby
-
-### Dokumentacja
-- **JUnit 5**: https://junit.org/junit5/docs/current/user-guide/
-- **Mockito**: https://javadoc.io/doc/org.mockito/mockito-core/latest/
-
 ### Materiały w projekcie
 - `OPIS_TESTOW.md` - Szczegółowy opis wszystkich testów
 - `testy_fuc_instr` - Instrukcje do zadań testowych
-
----
-
-**Autor**: System Bankomatu - Projekt IO  
-**Data**: 2026-01-27  
-**Wersja**: 1.0

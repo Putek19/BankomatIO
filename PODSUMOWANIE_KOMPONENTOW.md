@@ -1,8 +1,3 @@
-# Podsumowanie Komponentów Systemu Bankomatu
-
-## ✅ Weryfikacja Kompletności Systemu
-
-System zawiera wszystkie niezbędne komponenty do funkcjonowania bankomatu. Poniżej szczegółowe zestawienie:
 
 ## Warstwa Model
 
@@ -47,24 +42,24 @@ System zawiera wszystkie niezbędne komponenty do funkcjonowania bankomatu. Poni
 
 ## Funkcjonalności
 
-### ✅ Operacje Klienta
+### Operacje Klienta
 - Weryfikacja tożsamości (PIN)
 - Wypłata gotówki
 - Sprawdzanie salda
 - Blokada karty po 5 nieudanych próbach PIN
 
-### ✅ Operacje Administratora
+### Operacje Administratora
 - Monitorowanie bezpieczeństwa
 - Zdalne blokowanie bankomatu
 - Zarządzanie gotówką
 
-### ✅ Bezpieczeństwo
+### Bezpieczeństwo
 - Weryfikacja PIN z limitem prób
 - Automatyczna blokada karty
 - Monitoring bezpieczeństwa z wykrywaniem zagrożeń
 - Zdalne blokowanie bankomatu
 
-### ✅ Wzorce Projektowe
+### Wzorce Projektowe
 - **Factory Method** - FabrykaKlienta
 - **Decorator** - KartaDekorator, ZablokowanaKarta
 - **Strategy** - IStrategiaZabezpieczenia i implementacje
@@ -98,36 +93,6 @@ Utworzono kompleksowe testy jednostkowe dla wszystkich komponentów:
 - `SuiteMock` - tylko testy z Mockito
 - `SuiteBezpieczenstwo` - tylko testy bezpieczeństwa (bez mocków)
 
-### Skrypty testowe
 
-**`run-tests.sh`** - Uruchamia wszystkie testy (Model + Kontroler)
-```bash
-cd src
-./run-tests.sh
-```
-- Pobiera biblioteki (JUnit, Mockito) przy pierwszym uruchomieniu
-- Kompiluje kod źródłowy i testy
-- Uruchamia ~85+ testów
-- Czas: ~10-15 sekund
 
-**`test_pu.sh`** - Uruchamia tylko testy przypadków użycia (Kontroler)
-```bash
-cd src
-./test_pu.sh
-```
-- Wymaga wcześniejszego uruchomienia `run-tests.sh`
-- Uruchamia ~35 testów warstwy Kontroler
-- Szybsze iteracje podczas developmentu
-- Czas: ~5-7 sekund
 
-**Dokumentacja skryptów**: Zobacz `src/SKRYPTY_TESTOWE.md` dla szczegółowej instrukcji
-
-## Wnioski
-
-✅ **System jest kompletny** - zawiera wszystkie niezbędne komponenty do funkcjonowania bankomatu:
-- Warstwa modelu z dostępem do danych
-- Warstwa kontrolera z logiką biznesową
-- Mechanizmy bezpieczeństwa
-- Wzorce projektowe zapewniające elastyczność i rozszerzalność
-
-✅ **Testy pokrywają** wszystkie główne funkcjonalności i scenariusze brzegowe.
