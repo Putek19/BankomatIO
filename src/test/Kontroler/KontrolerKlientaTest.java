@@ -62,7 +62,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WeryfikacjaTozsamosci - PoprawnyPin")
 	public void testWeryfikacjaTozsamosci_PoprawnyPin() {
 		// Jeśli (given): karta z poprawnym PIN-em
-		// Gdy (when): weryfikacja tożsamościć z poprawnym PIN-em
+		// Gdy (when): weryfikacja tożsamości z poprawnym PIN-em
 		boolean wynik = kontroler.weryfikacjaTozsamosci(100, "1234");
 		// Wtedy (then): weryfikacja powinna się udać
 		assertTrue(wynik);
@@ -73,7 +73,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WeryfikacjaTozsamosci - NiepoprawnyPin")
 	public void testWeryfikacjaTozsamosci_NiepoprawnyPin() {
 		// Jeśli (given): karta z ustalonym PIN-em
-		// Gdy (when): weryfikacja tożsamościć z niepoprawnym PIN-em
+		// Gdy (when): weryfikacja tożsamości z niepoprawnym PIN-em
 		boolean wynik = kontroler.weryfikacjaTozsamosci(100, "0000");
 		// Wtedy (then): weryfikacja powinna się nie udać
 		assertFalse(wynik);
@@ -84,7 +84,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WeryfikacjaTozsamosci - NieistniejacaKarta")
 	public void testWeryfikacjaTozsamosci_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próba weryfikować tożsamość nieistniejącej karty
+		// Gdy (when): próba weryfikacji tożsamości nieistniejącej karty
 		boolean wynik = kontroler.weryfikacjaTozsamosci(999, "1234");
 		// Wtedy (then): weryfikacja powinna się nie udać
 		assertFalse(wynik);

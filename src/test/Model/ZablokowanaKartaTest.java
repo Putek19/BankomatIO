@@ -70,7 +70,7 @@ public class ZablokowanaKartaTest {
 	public void testZmienSaldo_NieZmieniaSalda() {
 		// Jeśli (given): zablokowana karta z początkowym saldem
 		BigDecimal saldoPrzed = zablokowanaKarta.pobierzSaldo();
-		// Gdy (when): próba zmienić saldo zablokowanej karty
+		// Gdy (when): próba zmiany saldo zablokowanej karty
 		zablokowanaKarta.zmienSaldo(new BigDecimal("100.00"));
 		// Wtedy (then): saldo nie powinno się zmienić
 		BigDecimal saldoPo = zablokowanaKarta.pobierzSaldo();

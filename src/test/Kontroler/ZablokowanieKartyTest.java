@@ -71,7 +71,7 @@ public class ZablokowanieKartyTest {
 	@DisplayName("WykonajReakcje - NieistniejacaKarta")
 	public void testWykonajReakcje_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próba wykonać reakcję na nieistniejącej karcie
+		// Gdy (when): próba wykonania reakcję na nieistniejącej karcie
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> zablokowanie.wykonajReakcje(999));
 	}

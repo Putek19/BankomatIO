@@ -116,7 +116,7 @@ public class KlientTest {
 	@DisplayName("PobierzKarte - NieistniejacaKarta")
 	public void testPobierzKarte_NieistniejacaKarta() {
 		// Jeśli (given): klient bez kart
-		// Gdy (when): próba pobrać nieistniejącą kartę
+		// Gdy (when): próba pobrania nieistniejącą kartę
 		// Wtedy (then): wynik powinien być null
 		assertNull(klient.pobierzKarte(999));
 	}

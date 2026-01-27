@@ -147,7 +147,7 @@ public class ModelTest {
 	@DisplayName("ZablokujKarte - NieistniejacaKarta")
 	public void testZablokujKarte_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próba zablokować nieistniejącą kartę
+		// Gdy (when): próba zablokowania nieistniejącą kartę
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> model.zablokujKarte(999));
 	}
@@ -193,7 +193,7 @@ public class ModelTest {
 	@DisplayName("PobierzDaneKarty - NieistniejacaKarta")
 	public void testPobierzDaneKarty_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próba pobrać dane nieistniejącej karty
+		// Gdy (when): próba pobrania dane nieistniejącej karty
 		String dane = model.pobierzDaneKarty(999);
 		// Wtedy (then): wynik powinien być null
 		assertNull(dane);

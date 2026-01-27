@@ -86,7 +86,7 @@ public class InwentarzTest {
 	@DisplayName("DajKlienta - Nieistniejacy")
 	public void testDajKlienta_Nieistniejacy() {
 		// Jeśli (given): pusty inwentarz
-		// Gdy (when): próba pobrać nieistniejącego klienta
+		// Gdy (when): próba pobrania nieistniejącego klienta
 		// Wtedy (then): wynik powinien być null
 		assertNull(inwentarz.dajKlienta(999));
 	}
