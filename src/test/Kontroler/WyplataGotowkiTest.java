@@ -55,7 +55,7 @@ public class WyplataGotowkiTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): wypłata została utworzona w setUp()
-		// Gdy (when): sprawdzamy stan wypłaty
+		// Gdy (when): sprawdzenie stanu wypłaty
 		// Wtedy (then): wypłata powinna być zainicjalizowana z kwotą 0
 		assertNotNull(wyplata);
 		assertEquals(0.0, wyplata.dajKwote(), 0.001);
@@ -67,7 +67,7 @@ public class WyplataGotowkiTest {
 	public void testUstawKwote() {
 		// Jeśli (given): kwota do ustawienia
 		double kwota = 150.0;
-		// Gdy (when): ustawiamy kwotę wypłaty
+		// Gdy (when): ustawienie kwoty wypłaty
 		wyplata.ustawKwote(kwota);
 		// Wtedy (then): kwota powinna być ustawiona poprawnie
 		assertEquals(kwota, wyplata.dajKwote(), 0.001);
@@ -81,7 +81,7 @@ public class WyplataGotowkiTest {
 		double kwota = 150.0;
 		wyplata.ustawKwote(kwota);
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): realizujemy wypłatę
+		// Gdy (when): realizacja wypłaty
 		boolean wynik = wyplata.realizujWyplate(100);
 		// Wtedy (then): wypłata powinna się udać i saldo powinno być zmniejszone
 		assertTrue(wynik);
@@ -98,7 +98,7 @@ public class WyplataGotowkiTest {
 		double kwota = 2000.0;
 		wyplata.ustawKwote(kwota);
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		boolean wynik = wyplata.realizujWyplate(100);
 		// Wtedy (then): wypłata powinna się nie udać, saldo bez zmian
 		assertFalse(wynik);
@@ -113,7 +113,7 @@ public class WyplataGotowkiTest {
 		// Jeśli (given): kwota wypłaty ustawiona na zero
 		wyplata.ustawKwote(0.0);
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		boolean wynik = wyplata.realizujWyplate(100);
 		// Wtedy (then): wypłata powinna się nie udać, saldo bez zmian
 		assertFalse(wynik);
@@ -128,7 +128,7 @@ public class WyplataGotowkiTest {
 		// Jeśli (given): ujemna kwota wypłaty
 		wyplata.ustawKwote(-100.0);
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		boolean wynik = wyplata.realizujWyplate(100);
 		// Wtedy (then): wypłata powinna się nie udać, saldo bez zmian
 		assertFalse(wynik);
@@ -146,7 +146,7 @@ public class WyplataGotowkiTest {
 		karta.zmienSaldo(saldoPrzed.subtract(new BigDecimal("1000.00")));
 		wyplata.ustawKwote(kwota);
 		BigDecimal saldoPrzedTest = model.sprawdzSaldo(100);
-		// Gdy (when): realizujemy wypłatę maksymalnej kwoty
+		// Gdy (when): realizacja wypłaty maksymalnej kwoty
 		boolean wynik = wyplata.realizujWyplate(100);
 		// Wtedy (then): wypłata powinna się udać i saldo być zgodne z oczekiwanym
 		assertTrue(wynik);
@@ -164,7 +164,7 @@ public class WyplataGotowkiTest {
 		karta.zmienSaldo(new BigDecimal("9000.00"));
 		wyplata.ustawKwote(kwota);
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		boolean wynik = wyplata.realizujWyplate(100);
 		// Wtedy (then): wypłata powinna się nie udać, saldo bez zmian
 		assertFalse(wynik);
@@ -178,7 +178,7 @@ public class WyplataGotowkiTest {
 	public void testRealizujWyplate_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
 		wyplata.ustawKwote(100.0);
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		boolean wynik = wyplata.realizujWyplate(999);
 		// Wtedy (then): wypłata powinna się nie udać
 		assertFalse(wynik);

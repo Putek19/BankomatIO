@@ -48,7 +48,7 @@ public class ModelTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): model został utworzony w setUp()
-		// Gdy (when): sprawdzamy stan modelu
+		// Gdy (when): sprawdzenie stanu modelu
 		// Wtedy (then): model powinien być zainicjalizowany, bankomat niezablokowany
 		assertNotNull(model);
 		assertFalse(model.czyBankomatZablokowany());
@@ -59,7 +59,7 @@ public class ModelTest {
 	@DisplayName("SprawdzSaldo - IstniejacaKarta")
 	public void testSprawdzSaldo_IstniejacaKarta() {
 		// Jeśli (given): karta z saldem w systemie
-		// Gdy (when): sprawdzamy saldo karty
+		// Gdy (when): sprawdzenie salda karty
 		BigDecimal saldo = model.sprawdzSaldo(100);
 		// Wtedy (then): saldo powinno być zgodne z oczekiwanym
 		assertEquals(new BigDecimal("1000.00"), saldo);
@@ -70,7 +70,7 @@ public class ModelTest {
 	@DisplayName("SprawdzSaldo - NieistniejacaKarta")
 	public void testSprawdzSaldo_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): sprawdzamy saldo nieistniejącej karty
+		// Gdy (when): sprawdzenie salda nieistniejącej karty
 		BigDecimal saldo = model.sprawdzSaldo(999);
 		// Wtedy (then): saldo powinno być zero
 		assertEquals(BigDecimal.ZERO, saldo);
@@ -81,7 +81,7 @@ public class ModelTest {
 	@DisplayName("SprawdzPin - PoprawnyPin")
 	public void testSprawdzPin_PoprawnyPin() {
 		// Jeśli (given): karta z poprawnym PIN-em
-		// Gdy (when): sprawdzamy poprawny PIN
+		// Gdy (when): sprawdzenie poprawny PIN
 		// Wtedy (then): sprawdzenie powinno zwrócić true
 		assertTrue(model.sprawdzPin(100, "1234"));
 	}
@@ -91,7 +91,7 @@ public class ModelTest {
 	@DisplayName("SprawdzPin - NiepoprawnyPin")
 	public void testSprawdzPin_NiepoprawnyPin() {
 		// Jeśli (given): karta z ustalonym PIN-em
-		// Gdy (when): sprawdzamy niepoprawny PIN
+		// Gdy (when): sprawdzenie niepoprawny PIN
 		// Wtedy (then): sprawdzenie powinno zwrócić false
 		assertFalse(model.sprawdzPin(100, "0000"));
 	}
@@ -101,7 +101,7 @@ public class ModelTest {
 	@DisplayName("SprawdzPin - NieistniejacaKarta")
 	public void testSprawdzPin_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): sprawdzamy PIN nieistniejącej karty
+		// Gdy (when): sprawdzenie PIN-u nieistniejącej karty
 		// Wtedy (then): sprawdzenie powinno zwrócić false
 		assertFalse(model.sprawdzPin(999, "1234"));
 	}
@@ -112,7 +112,7 @@ public class ModelTest {
 	public void testAktualizujSaldo() {
 		// Jeśli (given): karta z początkowym saldem
 		BigDecimal kwota = new BigDecimal("-100.00");
-		// Gdy (when): aktualizujemy saldo o ujemną kwotę
+		// Gdy (when): aktualizacja saldao o ujemną kwotę
 		model.aktualizujSaldo(100, kwota);
 		// Wtedy (then): saldo powinno być zmniejszone
 		BigDecimal noweSaldo = model.sprawdzSaldo(100);
@@ -125,7 +125,7 @@ public class ModelTest {
 	public void testAktualizujSaldo_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta i kwota do aktualizacji
 		BigDecimal kwota = new BigDecimal("100.00");
-		// Gdy (when): próbujemy zaktualizować saldo nieistniejącej karty
+		// Gdy (when): próba zaktualizować saldo nieistniejącej karty
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> model.aktualizujSaldo(999, kwota));
 	}
@@ -136,7 +136,7 @@ public class ModelTest {
 	public void testZablokujKarte() {
 		// Jeśli (given): karta niezablokowana w systemie
 		assertFalse(karta.czyZablokowana());
-		// Gdy (when): blokujemy kartę przez model
+		// Gdy (when): zablokowanie kartyyę przez model
 		model.zablokujKarte(100);
 		// Wtedy (then): karta powinna być zablokowana
 		assertTrue(karta.czyZablokowana());
@@ -147,7 +147,7 @@ public class ModelTest {
 	@DisplayName("ZablokujKarte - NieistniejacaKarta")
 	public void testZablokujKarte_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próbujemy zablokować nieistniejącą kartę
+		// Gdy (when): próba zablokować nieistniejącą kartę
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> model.zablokujKarte(999));
 	}
@@ -158,7 +158,7 @@ public class ModelTest {
 	public void testZablokujBankomat() {
 		// Jeśli (given): bankomat niezablokowany
 		assertFalse(model.czyBankomatZablokowany());
-		// Gdy (when): blokujemy bankomat
+		// Gdy (when): zablokowanie bankomatu
 		model.zablokujBankomat();
 		// Wtedy (then): bankomat powinien być zablokowany
 		assertTrue(model.czyBankomatZablokowany());
@@ -170,7 +170,7 @@ public class ModelTest {
 	public void testZarejestrujZdarzenie() {
 		// Jeśli (given): zdarzenie do zarejestrowania
 		String zdarzenie = "Test zdarzenie";
-		// Gdy (when): rejestrujemy zdarzenie
+		// Gdy (when): rejestracja zdarzeniaie
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> model.zarejestrujZdarzenie(zdarzenie));
 	}
@@ -180,7 +180,7 @@ public class ModelTest {
 	@DisplayName("PobierzDaneKarty")
 	public void testPobierzDaneKarty() {
 		// Jeśli (given): karta z danymi w systemie
-		// Gdy (when): pobieramy dane karty
+		// Gdy (when): pobranie danyche karty
 		String dane = model.pobierzDaneKarty(100);
 		// Wtedy (then): dane powinny zawierać ID i saldo karty
 		assertNotNull(dane);
@@ -193,7 +193,7 @@ public class ModelTest {
 	@DisplayName("PobierzDaneKarty - NieistniejacaKarta")
 	public void testPobierzDaneKarty_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próbujemy pobrać dane nieistniejącej karty
+		// Gdy (when): próba pobrać dane nieistniejącej karty
 		String dane = model.pobierzDaneKarty(999);
 		// Wtedy (then): wynik powinien być null
 		assertNull(dane);
@@ -205,7 +205,7 @@ public class ModelTest {
 	public void testUsuniecieKlienta() {
 		// Jeśli (given): klient w systemie
 		assertNotNull(inwentarz.dajKlienta(1));
-		// Gdy (when): usuwamy klienta
+		// Gdy (when): usunięcie klienta
 		model.usuniecieKlienta(1);
 		// Wtedy (then): klient nie powinien być dostępny
 		assertNull(inwentarz.dajKlienta(1));
@@ -216,7 +216,7 @@ public class ModelTest {
 	@DisplayName("UsuniecieKarty")
 	public void testUsuniecieKarty() {
 		// Jeśli (given): karta w systemie
-		// Gdy (when): usuwamy kartę
+		// Gdy (when): usunięcie kartyę
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> model.usuniecieKarty(100));
 	}

@@ -58,7 +58,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
         String obraz = "obraz_bezpieczny";
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         boolean wynik = monitoring.analizaObrazu(obraz);
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -74,7 +74,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
         String obraz = "obraz_zagrożenie";
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         boolean wynik = monitoring.analizaObrazu(obraz);
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -88,7 +88,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
     public void testAnalizaObrazu_Null() {
         // Jeśli (given): obraz null
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         boolean wynik = monitoring.analizaObrazu(null);
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -105,7 +105,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
         doNothing().when(mockModel).zablokujBankomat();
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         monitoring.obsluzZagrozenie(idBankomatu);
 
         // Wtedy (then): sprawdzenie kolejności wywołań i asercje
@@ -122,7 +122,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
         // Jeśli (given): określenie zachowania symulacji
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         monitoring.zatrzymajMonitoring();
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -138,7 +138,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
         doNothing().when(mockModel).zablokujBankomat();
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         monitoring.rozpocznijMonitoring();
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -169,7 +169,7 @@ public class MonitorowanieBezpieczenstwaMockTest {
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
         doNothing().when(mockModel).zablokujBankomat();
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         monitoring.rozpocznijMonitoring();
 
         // Wtedy (then): sprawdzenie ilości wywołań

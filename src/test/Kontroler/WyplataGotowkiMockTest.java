@@ -64,7 +64,7 @@ public class WyplataGotowkiMockTest {
         doNothing().when(mockModel).aktualizujSaldo(eq(idKarty), any(BigDecimal.class));
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(kwota);
         boolean wynik = wyplata.realizujWyplate(idKarty);
 
@@ -87,7 +87,7 @@ public class WyplataGotowkiMockTest {
         when(mockModel.sprawdzSaldo(idKarty)).thenReturn(saldo);
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(kwota);
         boolean wynik = wyplata.realizujWyplate(idKarty);
 
@@ -106,7 +106,7 @@ public class WyplataGotowkiMockTest {
         int idKarty = 100;
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(0.0);
         boolean wynik = wyplata.realizujWyplate(idKarty);
 
@@ -124,7 +124,7 @@ public class WyplataGotowkiMockTest {
         int idKarty = 100;
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(-100.0);
         boolean wynik = wyplata.realizujWyplate(idKarty);
 
@@ -143,7 +143,7 @@ public class WyplataGotowkiMockTest {
         double kwota = 6000.0;
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(kwota);
         boolean wynik = wyplata.realizujWyplate(idKarty);
 
@@ -166,7 +166,7 @@ public class WyplataGotowkiMockTest {
         doNothing().when(mockModel).aktualizujSaldo(eq(idKarty), any(BigDecimal.class));
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(kwota);
         boolean wynik = wyplata.realizujWyplate(idKarty);
 
@@ -189,7 +189,7 @@ public class WyplataGotowkiMockTest {
         when(mockModel.sprawdzSaldo(idKarty)).thenThrow(new RuntimeException("Błąd bazy danych"));
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(kwota);
 
         // Wtedy (then): oczekujemy wyjątku
@@ -210,7 +210,7 @@ public class WyplataGotowkiMockTest {
         doNothing().when(mockModel).aktualizujSaldo(anyInt(), any(BigDecimal.class));
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         wyplata.ustawKwote(kwota);
         wyplata.realizujWyplate(idKarty);
 

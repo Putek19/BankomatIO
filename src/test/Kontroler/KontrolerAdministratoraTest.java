@@ -39,7 +39,7 @@ public class KontrolerAdministratoraTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): kontroler administratora został utworzony w setUp()
-		// Gdy (when): sprawdzamy instancję kontrolera
+		// Gdy (when): sprawdzenie instancji kontrolera
 		// Wtedy (then): kontroler nie powinien być null
 		assertNotNull(kontroler);
 	}
@@ -49,7 +49,7 @@ public class KontrolerAdministratoraTest {
 	@DisplayName("MonitorowanieBezpieczenstwa")
 	public void testMonitorowanieBezpieczenstwa() {
 		// Jeśli (given): kontroler administratora z dostępem do monitoringu
-		// Gdy (when): uruchamiamy monitorowanie bezpieczeństwa
+		// Gdy (when): uruchomienie monitorowaniaie bezpieczeństwa
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.monitorowanieBezpieczenstwa());
 	}
@@ -71,7 +71,7 @@ public class KontrolerAdministratoraTest {
 	@DisplayName("ZarzadzanieGotowka")
 	public void testZarzadzanieGotowka() {
 		// Jeśli (given): kontroler administratora z dostępem do zarządzania gotówką
-		// Gdy (when): wykonujemy zarządzanie gotówką
+		// Gdy (when): wykonanie zarządzaniaie gotówką
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.zarzadzanieGotowka());
 	}

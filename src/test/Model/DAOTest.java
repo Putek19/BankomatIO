@@ -33,7 +33,7 @@ public class DAOTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): DAO został utworzony w setUp()
-		// Gdy (when): sprawdzamy instancję DAO
+		// Gdy (when): sprawdzenie instancji DAO
 		// Wtedy (then): DAO nie powinien być null
 		assertNotNull(dao);
 	}
@@ -44,7 +44,7 @@ public class DAOTest {
 	public void testDodajWpisDoRejestruZdarzen() {
 		// Jeśli (given): zdarzenie do dodania
 		String zdarzenie = "Test zdarzenie";
-		// Gdy (when): dodajemy wpis do rejestru zdarzeń
+		// Gdy (when): dodanie wpisu do rejestru zdarzeń
 		dao.dodajWpisDoRejestruZdarzen(zdarzenie);
 		// Wtedy (then): kolejne dodanie nie powinno wyrzucić wyjątku
 		assertDoesNotThrow(() -> dao.dodajWpisDoRejestruZdarzen("Kolejne zdarzenie"));
@@ -55,7 +55,7 @@ public class DAOTest {
 	@DisplayName("ZnajdzKlienta - Nieistniejacy")
 	public void testZnajdzKlienta_Nieistniejacy() {
 		// Jeśli (given): pusta baza klientów
-		// Gdy (when): szukamy nieistniejącego klienta
+		// Gdy (when): szukanie nieistniejącego klienta
 		// Wtedy (then): wynik powinien być null
 		assertNull(dao.znajdzKlienta(999));
 	}
@@ -66,7 +66,7 @@ public class DAOTest {
 	public void testDodajKlienta() {
 		// Jeśli (given): dane nowego klienta
 		String daneKlienta = "Jan Kowalski";
-		// Gdy (when): dodajemy klienta do bazy
+		// Gdy (when): dodanie klienta do bazy
 		int nrKlienta = dao.dodajKlienta(daneKlienta);
 		// Wtedy (then): klient powinien otrzymać numer większy od 0
 		assertTrue(nrKlienta > 0);
@@ -80,7 +80,7 @@ public class DAOTest {
 	@DisplayName("DodajKlienta - Wielokrotne")
 	public void testDodajKlienta_Wielokrotne() {
 		// Jeśli (given): trzech różnych klientów do dodania
-		// Gdy (when): dodajemy trzech klientów
+		// Gdy (when): dodanie trzech klientów
 		int nr1 = dao.dodajKlienta("Klient 1");
 		int nr2 = dao.dodajKlienta("Klient 2");
 		int nr3 = dao.dodajKlienta("Klient 3");
@@ -100,7 +100,7 @@ public class DAOTest {
 		// Jeśli (given): klient dodany do bazy
 		int nrKlienta = dao.dodajKlienta("Klient do usunięcia");
 		assertNotNull(dao.znajdzKlienta(nrKlienta));
-		// Gdy (when): usuwamy klienta
+		// Gdy (when): usunięcie klienta
 		dao.usunKlienta(nrKlienta);
 		// Wtedy (then): klient nie powinien być znaleziony
 		assertNull(dao.znajdzKlienta(nrKlienta));
@@ -111,7 +111,7 @@ public class DAOTest {
 	@DisplayName("UsunKlienta - Nieistniejacy")
 	public void testUsunKlienta_Nieistniejacy() {
 		// Jeśli (given): pusta baza klientów
-		// Gdy (when): próbujemy usunąć nieistniejącego klienta
+		// Gdy (when): próba usunięcia nieistniejącego klienta
 		// Wtedy (then): nie powinien zostać wyrzucony wyjątek
 		assertDoesNotThrow(() -> dao.usunKlienta(999));
 	}
@@ -122,7 +122,7 @@ public class DAOTest {
 	public void testEdytujKlienta() {
 		// Jeśli (given): klient dodany do bazy
 		int nrKlienta = dao.dodajKlienta("Klient");
-		// Gdy (when): edytujemy klienta
+		// Gdy (when): edycja klienta
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> dao.edytujKlienta(nrKlienta));
 	}
@@ -133,15 +133,15 @@ public class DAOTest {
 	public void testZmianaBlokadyKarty() {
 		// Jeśli (given): identyfikator karty
 		int idKarty = 1;
-		// Gdy (when): zmieniamy blokadę karty po raz pierwszy
+		// Gdy (when): zmiana blokady karty po raz pierwszy
 		boolean stan1 = dao.zmianaBlokadyKarty(idKarty);
 		// Wtedy (then): karta powinna być zablokowana
 		assertTrue(stan1);
-		// Gdy (when): zmieniamy blokadę karty po raz drugi
+		// Gdy (when): zmiana blokady karty po raz drugi
 		boolean stan2 = dao.zmianaBlokadyKarty(idKarty);
 		// Wtedy (then): karta powinna być odblokowana
 		assertFalse(stan2);
-		// Gdy (when): zmieniamy blokadę karty po raz trzeci
+		// Gdy (when): zmiana blokady karty po raz trzeci
 		boolean stan3 = dao.zmianaBlokadyKarty(idKarty);
 		// Wtedy (then): karta powinna być znowu zablokowana
 		assertTrue(stan3);
@@ -152,18 +152,18 @@ public class DAOTest {
 	@DisplayName("ZmianaBlokadyKarty - RozneKarty")
 	public void testZmianaBlokadyKarty_RozneKarty() {
 		// Jeśli (given): dwie różne karty
-		// Gdy (when): blokujemy pierwszą kartę
+		// Gdy (when): zablokowanie pierwszą kartę
 		boolean stan1 = dao.zmianaBlokadyKarty(1);
-		// Gdy (when): blokujemy drugą kartę
+		// Gdy (when): zablokowanie drugą kartę
 		boolean stan2 = dao.zmianaBlokadyKarty(2);
 		// Wtedy (then): obie karty powinny być zablokowane
 		assertTrue(stan1);
 		assertTrue(stan2);
-		// Gdy (when): odblokowujemy pierwszą kartę
+		// Gdy (when): odblokowanie pierwszą kartę
 		boolean stan1_2 = dao.zmianaBlokadyKarty(1);
 		// Wtedy (then): pierwsza karta powinna być odblokowana
 		assertFalse(stan1_2);
-		// Gdy (when): odblokowujemy drugą kartę
+		// Gdy (when): odblokowanie drugą kartę
 		boolean stan2_2 = dao.zmianaBlokadyKarty(2);
 		// Wtedy (then): druga karta powinna być odblokowana
 		assertFalse(stan2_2);

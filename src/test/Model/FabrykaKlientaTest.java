@@ -34,7 +34,7 @@ public class FabrykaKlientaTest {
 	public void testStworzKontoKlienta() {
 		// Jeśli (given): formularz z danymi klienta
 		Formularz formularz = new Formularz("Jan", "Kowalski", 123456789);
-		// Gdy (when): tworzymy konto klienta
+		// Gdy (when): tworzenie kontao klienta
 		IKlient klient = fabryka.stworzKontoKlienta(formularz);
 		// Wtedy (then): klient powinien być utworzony z poprawnymi danymi
 		assertNotNull(klient);
@@ -49,7 +49,7 @@ public class FabrykaKlientaTest {
 	@DisplayName("StworzKontoKlienta - NullFormularz")
 	public void testStworzKontoKlienta_NullFormularz() {
 		// Jeśli (given): formularz o wartości null
-		// Gdy (when): próbujemy stworzyć konto z null
+		// Gdy (when): próba stworzyć konto z null
 		IKlient klient = fabryka.stworzKontoKlienta(null);
 		// Wtedy (then): wynik powinien być null
 		assertNull(klient);
@@ -63,7 +63,7 @@ public class FabrykaKlientaTest {
 		Formularz form1 = new Formularz("Jan", "Kowalski", 111111111);
 		Formularz form2 = new Formularz("Anna", "Nowak", 222222222);
 		Formularz form3 = new Formularz("Piotr", "Wiśniewski", 333333333);
-		// Gdy (when): tworzymy trzy konta klientów
+		// Gdy (when): tworzenie trzy konta klientów
 		IKlient klient1 = fabryka.stworzKontoKlienta(form1);
 		IKlient klient2 = fabryka.stworzKontoKlienta(form2);
 		IKlient klient3 = fabryka.stworzKontoKlienta(form3);
@@ -80,7 +80,7 @@ public class FabrykaKlientaTest {
 	public void testStworzKontoKlienta_PoprawneDane(String imie, String nazwisko, int pesel) {
 		// Jeśli (given): formularz z parametryzowanymi danymi klienta
 		Formularz formularz = new Formularz(imie, nazwisko, pesel);
-		// Gdy (when): tworzymy konto klienta
+		// Gdy (when): tworzenie kontao klienta
 		IKlient klient = fabryka.stworzKontoKlienta(formularz);
 		// Wtedy (then): klient powinien być utworzony z poprawnymi danymi
 		assertNotNull(klient);

@@ -48,8 +48,8 @@ public class ZablokowanieKartyTest {
 	@Order(1)
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
-		// Jeśli (given): zablokowanie karty zostało utworzone w setUp()
-		// Gdy (when): sprawdzamy instancję zablokowania
+		// Jeśli (given): zablokowanie kartyyy zostało utworzone w setUp()
+		// Gdy (when): sprawdzenie instancji zablokowania
 		// Wtedy (then): zablokowanie nie powinno być null
 		assertNotNull(zablokowanie);
 	}
@@ -60,7 +60,7 @@ public class ZablokowanieKartyTest {
 	public void testWykonajReakcje() {
 		// Jeśli (given): karta niezablokowana
 		assertFalse(karta.czyZablokowana());
-		// Gdy (when): wykonujemy reakcję zabezpieczającą
+		// Gdy (when): wykonanie reakcjię zabezpieczającą
 		zablokowanie.wykonajReakcje(100);
 		// Wtedy (then): karta powinna zostać zablokowana
 		assertTrue(karta.czyZablokowana());
@@ -71,7 +71,7 @@ public class ZablokowanieKartyTest {
 	@DisplayName("WykonajReakcje - NieistniejacaKarta")
 	public void testWykonajReakcje_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próbujemy wykonać reakcję na nieistniejącej karcie
+		// Gdy (when): próba wykonać reakcję na nieistniejącej karcie
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> zablokowanie.wykonajReakcje(999));
 	}

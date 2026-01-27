@@ -70,7 +70,7 @@ public class WeryfikacjaTozsamosciMockTest {
         when(mockModel.sprawdzPin(idKarty, pin)).thenReturn(true);
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         boolean wynik = weryfikacja.weryfikujPin(idKarty, pin);
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -90,7 +90,7 @@ public class WeryfikacjaTozsamosciMockTest {
         when(mockModel.sprawdzPin(idKarty, pin)).thenReturn(false);
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         boolean wynik = weryfikacja.weryfikujPin(idKarty, pin);
 
         // Wtedy (then): sprawdzenie użycia symulacji i asercje
@@ -158,7 +158,7 @@ public class WeryfikacjaTozsamosciMockTest {
         when(mockModel.sprawdzPin(idKarty, pin)).thenReturn(true);
         doNothing().when(mockModel).zarejestrujZdarzenie(anyString());
 
-        // Gdy (when): wykonanie testowanej operacji
+        // Gdy (when): wykonanie testowanej operacjii
         boolean wynik = weryfikacja.weryfikujPin(idKarty, pin);
 
         // Wtedy (then): sprawdzenie kolejności użycia symulacji
@@ -190,7 +190,7 @@ public class WeryfikacjaTozsamosciMockTest {
         // Jeśli (given): nowa strategia z mockiem
         ZablokowanieKarty nowaStrategia = new ZablokowanieKarty(mockModel);
 
-        // Gdy (when): ustawienie strategii
+        // Gdy (when): ustawienie strategiii
         assertDoesNotThrow(() -> weryfikacja.ustawStrategie(nowaStrategia));
 
         // Wtedy (then): sprawdzenie że strategia została ustawiona

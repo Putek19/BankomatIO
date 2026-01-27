@@ -35,7 +35,7 @@ public class InwentarzTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): inwentarz został utworzony w setUp()
-		// Gdy (when): sprawdzamy instancję inwentarza
+		// Gdy (when): sprawdzenie instancji inwentarza
 		// Wtedy (then): inwentarz nie powinien być null
 		assertNotNull(inwentarz);
 	}
@@ -46,7 +46,7 @@ public class InwentarzTest {
 	public void testDodajKlienta() {
 		// Jeśli (given): nowy klient do dodania
 		IKlient klient = new Klient(1, "Jan");
-		// Gdy (when): dodajemy klienta do inwentarza
+		// Gdy (when): dodanie klienta do inwentarza
 		inwentarz.dodajKlienta(klient);
 		// Wtedy (then): klient powinien być dostępny w inwentarzu
 		IKlient pobrany = inwentarz.dajKlienta(1);
@@ -59,7 +59,7 @@ public class InwentarzTest {
 	@DisplayName("DodajKlienta - Null")
 	public void testDodajKlienta_Null() {
 		// Jeśli (given): próba dodania klienta o wartości null
-		// Gdy (when): dodajemy null jako klienta
+		// Gdy (when): dodanie null jako klienta
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> inwentarz.dodajKlienta(null));
 	}
@@ -73,7 +73,7 @@ public class InwentarzTest {
 		IKlient klient2 = new Klient(2, "Anna");
 		inwentarz.dodajKlienta(klient1);
 		inwentarz.dodajKlienta(klient2);
-		// Gdy (when): pobieramy drugiego klienta
+		// Gdy (when): pobranie drugiejiego klienta
 		IKlient pobrany = inwentarz.dajKlienta(2);
 		// Wtedy (then): powinien zostać zwrócony poprawny klient
 		assertNotNull(pobrany);
@@ -86,7 +86,7 @@ public class InwentarzTest {
 	@DisplayName("DajKlienta - Nieistniejacy")
 	public void testDajKlienta_Nieistniejacy() {
 		// Jeśli (given): pusty inwentarz
-		// Gdy (when): próbujemy pobrać nieistniejącego klienta
+		// Gdy (when): próba pobrać nieistniejącego klienta
 		// Wtedy (then): wynik powinien być null
 		assertNull(inwentarz.dajKlienta(999));
 	}
@@ -99,7 +99,7 @@ public class InwentarzTest {
 		IKlient klient = new Klient(1, "Jan");
 		inwentarz.dodajKlienta(klient);
 		assertNotNull(inwentarz.dajKlienta(1));
-		// Gdy (when): usuwamy klienta
+		// Gdy (when): usunięcie klienta
 		inwentarz.usunKlienta(1);
 		// Wtedy (then): klient nie powinien być dostępny
 		assertNull(inwentarz.dajKlienta(1));
@@ -110,7 +110,7 @@ public class InwentarzTest {
 	@DisplayName("UsunKlienta - Nieistniejacy")
 	public void testUsunKlienta_Nieistniejacy() {
 		// Jeśli (given): pusty inwentarz
-		// Gdy (when): próbujemy usunąć nieistniejącego klienta
+		// Gdy (when): próba usunięcia nieistniejącego klienta
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> inwentarz.usunKlienta(999));
 	}
@@ -126,7 +126,7 @@ public class InwentarzTest {
 		inwentarz.dodajKlienta(klient1);
 		inwentarz.dodajKlienta(klient2);
 		inwentarz.dodajKlienta(klient3);
-		// Gdy (when): pobieramy wszystkich klientów
+		// Gdy (when): pobranie wszystkich klientówów
 		List<IKlient> klienci = inwentarz.pobierzWszystkichKlientow();
 		// Wtedy (then): lista powinna zawierać 3 klientów
 		assertNotNull(klienci);
@@ -138,7 +138,7 @@ public class InwentarzTest {
 	@DisplayName("PobierzWszystkichKlientow - Pusty")
 	public void testPobierzWszystkichKlientow_Pusty() {
 		// Jeśli (given): pusty inwentarz
-		// Gdy (when): pobieramy wszystkich klientów
+		// Gdy (when): pobranie wszystkich klientówów
 		List<IKlient> klienci = inwentarz.pobierzWszystkichKlientow();
 		// Wtedy (then): lista powinna być pusta ale nie null
 		assertNotNull(klienci);
@@ -154,7 +154,7 @@ public class InwentarzTest {
 		IKarta karta = new Karta(100, "1234", new BigDecimal("1000.00"));
 		klient.dodajKarte(karta);
 		inwentarz.dodajKlienta(klient);
-		// Gdy (when): blokujemy kartę przez inwentarz
+		// Gdy (when): zablokowanie kartyyę przez inwentarz
 		inwentarz.zablokujKarte(100);
 		// Wtedy (then): karta powinna być zablokowana
 		boolean stan = dao.zmianaBlokadyKarty(100);

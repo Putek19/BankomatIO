@@ -52,7 +52,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): kontroler został utworzony w setUp()
-		// Gdy (when): sprawdzamy instancję kontrolera
+		// Gdy (when): sprawdzenie instancji kontrolera
 		// Wtedy (then): kontroler nie powinien być null
 		assertNotNull(kontroler);
 	}
@@ -62,7 +62,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WeryfikacjaTozsamosci - PoprawnyPin")
 	public void testWeryfikacjaTozsamosci_PoprawnyPin() {
 		// Jeśli (given): karta z poprawnym PIN-em
-		// Gdy (when): weryfikujemy tożsamość z poprawnym PIN-em
+		// Gdy (when): weryfikacja tożsamościć z poprawnym PIN-em
 		boolean wynik = kontroler.weryfikacjaTozsamosci(100, "1234");
 		// Wtedy (then): weryfikacja powinna się udać
 		assertTrue(wynik);
@@ -73,7 +73,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WeryfikacjaTozsamosci - NiepoprawnyPin")
 	public void testWeryfikacjaTozsamosci_NiepoprawnyPin() {
 		// Jeśli (given): karta z ustalonym PIN-em
-		// Gdy (when): weryfikujemy tożsamość z niepoprawnym PIN-em
+		// Gdy (when): weryfikacja tożsamościć z niepoprawnym PIN-em
 		boolean wynik = kontroler.weryfikacjaTozsamosci(100, "0000");
 		// Wtedy (then): weryfikacja powinna się nie udać
 		assertFalse(wynik);
@@ -84,7 +84,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WeryfikacjaTozsamosci - NieistniejacaKarta")
 	public void testWeryfikacjaTozsamosci_NieistniejacaKarta() {
 		// Jeśli (given): nieistniejąca karta
-		// Gdy (when): próbujemy weryfikować tożsamość nieistniejącej karty
+		// Gdy (when): próba weryfikować tożsamość nieistniejącej karty
 		boolean wynik = kontroler.weryfikacjaTozsamosci(999, "1234");
 		// Wtedy (then): weryfikacja powinna się nie udać
 		assertFalse(wynik);
@@ -97,7 +97,7 @@ public class KontrolerKlientaTest {
 		// Jeśli (given): karta z wystarczającym saldem i poprawne dane
 		double kwota = 150.0;
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): realizujemy wypłatę gotówki
+		// Gdy (when): realizacja wypłaty gotówki
 		kontroler.wyplataGotowki("100", "1234", kwota);
 		// Wtedy (then): saldo powinno zostać zmniejszone o kwotę wypłaty
 		BigDecimal saldoPo = model.sprawdzSaldo(100);
@@ -112,7 +112,7 @@ public class KontrolerKlientaTest {
 		// Jeśli (given): karta z ustalonym PIN-em i niepoprawny PIN
 		double kwota = 150.0;
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): próbujemy zrealizować wypłatę z niepoprawnym PIN-em
+		// Gdy (when): próba zrealizowaniać wypłatę z niepoprawnym PIN-em
 		kontroler.wyplataGotowki("100", "0000", kwota);
 		// Wtedy (then): saldo nie powinno się zmienić
 		BigDecimal saldoPo = model.sprawdzSaldo(100);
@@ -124,7 +124,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WyplataGotowki - NiepoprawnyNumerKarty")
 	public void testWyplataGotowki_NiepoprawnyNumerKarty() {
 		// Jeśli (given): niepoprawny numer karty (tekst zamiast liczby)
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.wyplataGotowki("abc", "1234", 100.0));
 	}
@@ -136,7 +136,7 @@ public class KontrolerKlientaTest {
 		// Jeśli (given): karta z niewystarczającym saldem
 		double kwota = 2000.0;
 		BigDecimal saldoPrzed = model.sprawdzSaldo(100);
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		kontroler.wyplataGotowki("100", "1234", kwota);
 		// Wtedy (then): saldo nie powinno się zmienić
 		BigDecimal saldoPo = model.sprawdzSaldo(100);
@@ -151,7 +151,7 @@ public class KontrolerKlientaTest {
 		double kwota = 5000.0;
 		BigDecimal saldoPrzed = new BigDecimal("10000.00");
 		karta.zmienSaldo(new BigDecimal("9000.00"));
-		// Gdy (when): realizujemy wypłatę maksymalnej kwoty
+		// Gdy (when): realizacja wypłaty maksymalnej kwoty
 		kontroler.wyplataGotowki("100", "1234", kwota);
 		// Wtedy (then): saldo powinno być pomniejszone o maksymalną kwotę
 		BigDecimal saldoPo = model.sprawdzSaldo(100);
@@ -167,7 +167,7 @@ public class KontrolerKlientaTest {
 		double kwota = 6000.0;
 		BigDecimal saldoPrzed = new BigDecimal("10000.00");
 		karta.zmienSaldo(new BigDecimal("9000.00"));
-		// Gdy (when): próbujemy zrealizować wypłatę
+		// Gdy (when): próba zrealizowaniać wypłatę
 		kontroler.wyplataGotowki("100", "1234", kwota);
 		// Wtedy (then): saldo nie powinno się zmienić
 		BigDecimal saldoPo = model.sprawdzSaldo(100);
@@ -179,7 +179,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("SprawdzenieStanuKonta")
 	public void testSprawdzenieStanuKonta() {
 		// Jeśli (given): kontroler klienta z dostępem do konta
-		// Gdy (when): sprawdzamy stan konta
+		// Gdy (when): sprawdzenie stanu konta
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.sprawdzenieStanuKonta());
 	}
@@ -189,7 +189,7 @@ public class KontrolerKlientaTest {
 	@DisplayName("WyplataGotowki - BezParametrow")
 	public void testWyplataGotowki_BezParametrow() {
 		// Jeśli (given): kontroler klienta
-		// Gdy (when): wywołujemy wypłatę gotówki bez parametrów
+		// Gdy (when): wywołanie wypłatyę gotówki bez parametrów
 		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.wyplataGotowki());
 	}

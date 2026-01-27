@@ -41,7 +41,7 @@ public class KartaTest {
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
 		// Jeśli (given): karta została utworzona w setUp()
-		// Gdy (when): sprawdzamy stan karty
+		// Gdy (when): sprawdzenie stanu karty
 		// Wtedy (then): karta powinna być poprawnie zainicjalizowana
 		assertNotNull(karta);
 		assertEquals(ID_KARTY, karta.dajId());
@@ -54,7 +54,7 @@ public class KartaTest {
 	@DisplayName("SprawdzPin - PoprawnyPin")
 	public void testSprawdzPin_PoprawnyPin() {
 		// Jeśli (given): karta z poprawnym PIN-em
-		// Gdy (when): sprawdzamy PIN
+		// Gdy (when): sprawdzenie PIN-u
 		// Wtedy (then): sprawdzenie powinno zwrócić true
 		assertTrue(karta.sprawdzPin(PIN));
 	}
@@ -65,7 +65,7 @@ public class KartaTest {
 	@DisplayName("SprawdzPin - NiepoprawnyPin")
 	public void testSprawdzPin_NiepoprawnyPin(String niepoprawnyPin) {
 		// Jeśli (given): karta z ustalonym PIN-em i niepoprawny PIN do sprawdzenia
-		// Gdy (when): sprawdzamy niepoprawny PIN
+		// Gdy (when): sprawdzenie niepoprawnego PIN-u
 		// Wtedy (then): sprawdzenie powinno zwrócić false
 		assertFalse(karta.sprawdzPin(niepoprawnyPin));
 	}
@@ -75,7 +75,7 @@ public class KartaTest {
 	@DisplayName("SprawdzPin - NullPin")
 	public void testSprawdzPin_NullPin() {
 		// Jeśli (given): karta z ustalonym PIN-em
-		// Gdy (when): sprawdzamy PIN o wartości null
+		// Gdy (when): sprawdzenie PIN-u o wartości null
 		// Wtedy (then): sprawdzenie powinno zwrócić false
 		assertFalse(karta.sprawdzPin(null));
 	}
@@ -88,7 +88,7 @@ public class KartaTest {
 		// Jeśli (given): karta z początkowym saldem i dodatnia kwota do dodania
 		BigDecimal kwota = new BigDecimal(kwotaStr);
 		BigDecimal oczekiwane = new BigDecimal(oczekiwaneStr);
-		// Gdy (when): zmieniamy saldo o dodatnią kwotę
+		// Gdy (when): zmiana salda o dodatnią kwotę
 		karta.zmienSaldo(kwota);
 		// Wtedy (then): saldo powinno być zwiększone o podaną kwotę
 		assertEquals(oczekiwane, karta.pobierzSaldo());
@@ -100,7 +100,7 @@ public class KartaTest {
 	public void testZmienSaldo_UjemnaKwota() {
 		// Jeśli (given): karta z początkowym saldem i ujemna kwota
 		BigDecimal kwota = new BigDecimal("-100.00");
-		// Gdy (when): zmieniamy saldo o ujemną kwotę
+		// Gdy (when): zmiana salda o ujemną kwotę
 		karta.zmienSaldo(kwota);
 		// Wtedy (then): saldo powinno być zmniejszone o podaną kwotę
 		BigDecimal oczekiwaneSaldo = SALDO_POCZATKOWE.add(kwota);
@@ -115,7 +115,7 @@ public class KartaTest {
 		karta.ustawZablokowana(true);
 		BigDecimal kwota = new BigDecimal("100.00");
 		BigDecimal saldoPrzed = karta.pobierzSaldo();
-		// Gdy (when): próbujemy zmienić saldo zablokowanej karty
+		// Gdy (when): próba zmianyy salda zablokowanej karty
 		karta.zmienSaldo(kwota);
 		// Wtedy (then): saldo nie powinno się zmienić
 		assertEquals(saldoPrzed, karta.pobierzSaldo());
@@ -126,11 +126,11 @@ public class KartaTest {
 	@DisplayName("UstawZablokowana")
 	public void testUstawZablokowana() {
 		// Jeśli (given): karta niezablokowana
-		// Gdy (when): blokujemy kartę
+		// Gdy (when): zablokowanie kartyyy
 		karta.ustawZablokowana(true);
 		// Wtedy (then): karta powinna być zablokowana
 		assertTrue(karta.czyZablokowana());
-		// Gdy (when): odblokowujemy kartę
+		// Gdy (when): odblokowanie kartyyy
 		karta.ustawZablokowana(false);
 		// Wtedy (then): karta powinna być odblokowana
 		assertFalse(karta.czyZablokowana());
@@ -142,7 +142,7 @@ public class KartaTest {
 	public void testSprawdzPin_ZablokowanaKarta() {
 		// Jeśli (given): karta zablokowana
 		karta.ustawZablokowana(true);
-		// Gdy (when): sprawdzamy PIN zablokowanej karty
+		// Gdy (when): sprawdzenie PIN-u zablokowanej karty
 		// Wtedy (then): sprawdzenie powinno zwrócić false
 		assertFalse(karta.sprawdzPin(PIN));
 	}
