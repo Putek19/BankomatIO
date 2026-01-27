@@ -38,6 +38,9 @@ public class KontrolerAdministratoraTest {
 	@Order(1)
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
+		// Jeśli (given): kontroler administratora został utworzony w setUp()
+		// Gdy (when): sprawdzamy instancję kontrolera
+		// Wtedy (then): kontroler nie powinien być null
 		assertNotNull(kontroler);
 	}
 
@@ -45,6 +48,9 @@ public class KontrolerAdministratoraTest {
 	@Order(2)
 	@DisplayName("MonitorowanieBezpieczenstwa")
 	public void testMonitorowanieBezpieczenstwa() {
+		// Jeśli (given): kontroler administratora z dostępem do monitoringu
+		// Gdy (when): uruchamiamy monitorowanie bezpieczeństwa
+		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.monitorowanieBezpieczenstwa());
 	}
 
@@ -52,8 +58,11 @@ public class KontrolerAdministratoraTest {
 	@Order(3)
 	@DisplayName("ZdalneBlokowanieBankomatu")
 	public void testZdalneBlokowanieBankomatu() {
+		// Jeśli (given): bankomat niezablokowany
 		assertFalse(model.czyBankomatZablokowany());
+		// Gdy (when): administrator zdalnie blokuje bankomat
 		kontroler.zdalneBlokowanieBankomatu();
+		// Wtedy (then): bankomat powinien zostać zablokowany
 		assertTrue(model.czyBankomatZablokowany());
 	}
 
@@ -61,6 +70,9 @@ public class KontrolerAdministratoraTest {
 	@Order(4)
 	@DisplayName("ZarzadzanieGotowka")
 	public void testZarzadzanieGotowka() {
+		// Jeśli (given): kontroler administratora z dostępem do zarządzania gotówką
+		// Gdy (when): wykonujemy zarządzanie gotówką
+		// Wtedy (then): operacja nie powinna wyrzucić wyjątku
 		assertDoesNotThrow(() -> kontroler.zarzadzanieGotowka());
 	}
 }

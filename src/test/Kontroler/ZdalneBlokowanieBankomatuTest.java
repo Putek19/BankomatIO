@@ -38,6 +38,9 @@ public class ZdalneBlokowanieBankomatuTest {
 	@Order(1)
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
+		// Jeśli (given): blokada została utworzona w setUp()
+		// Gdy (when): sprawdzamy instancję blokady
+		// Wtedy (then): blokada nie powinna być null
 		assertNotNull(blokada);
 	}
 
@@ -45,8 +48,11 @@ public class ZdalneBlokowanieBankomatuTest {
 	@Order(2)
 	@DisplayName("WykonajReakcje")
 	public void testWykonajReakcje() {
+		// Jeśli (given): bankomat niezablokowany
 		assertFalse(model.czyBankomatZablokowany());
+		// Gdy (when): wykonujemy reakcję zdalnego blokowania
 		blokada.wykonajReakcje(1);
+		// Wtedy (then): bankomat powinien zostać zablokowany
 		assertTrue(model.czyBankomatZablokowany());
 	}
 
@@ -54,9 +60,14 @@ public class ZdalneBlokowanieBankomatuTest {
 	@Order(3)
 	@DisplayName("WykonajReakcje - Wielokrotne")
 	public void testWykonajReakcje_Wielokrotne() {
+		// Jeśli (given): bankomat niezablokowany
+		// Gdy (when): wykonujemy reakcję zdalnego blokowania pierwszy raz
 		blokada.wykonajReakcje(1);
+		// Wtedy (then): bankomat powinien być zablokowany
 		assertTrue(model.czyBankomatZablokowany());
+		// Gdy (when): wykonujemy reakcję ponownie
 		blokada.wykonajReakcje(1);
+		// Wtedy (then): bankomat powinien pozostać zablokowany
 		assertTrue(model.czyBankomatZablokowany());
 	}
 }

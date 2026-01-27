@@ -44,6 +44,9 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(1)
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
+		// Jeśli (given): monitoring został utworzony w setUp()
+		// Gdy (when): sprawdzamy stan monitoringu
+		// Wtedy (then): monitoring powinien być zainicjalizowany jako nieaktywny
 		assertNotNull(monitoring);
 		assertFalse(monitoring.czyMonitoringAktywny());
 	}
@@ -52,7 +55,10 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(2)
 	@DisplayName("RozpocznijMonitoring")
 	public void testRozpocznijMonitoring() {
+		// Jeśli (given): monitoring nieaktywny
+		// Gdy (when): rozpoczynamy monitoring
 		monitoring.rozpocznijMonitoring();
+		// Wtedy (then): ponowne rozpoczęcie nie powinno wyrzucić wyjątku
 		assertDoesNotThrow(() -> monitoring.rozpocznijMonitoring());
 	}
 
@@ -60,7 +66,10 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(3)
 	@DisplayName("AnalizaObrazu - Bezpieczny")
 	public void testAnalizaObrazu_Bezpieczny() {
+		// Jeśli (given): obraz oznaczony jako bezpieczny
+		// Gdy (when): analizujemy obraz
 		boolean wynik = monitoring.analizaObrazu("obraz_bezpieczny");
+		// Wtedy (then): nie powinno zostać wykryte zagrożenie
 		assertFalse(wynik);
 	}
 
@@ -68,7 +77,10 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(4)
 	@DisplayName("AnalizaObrazu - Zagrozenie")
 	public void testAnalizaObrazu_Zagrozenie() {
+		// Jeśli (given): obraz oznaczony jako zagrożenie
+		// Gdy (when): analizujemy obraz
 		boolean wynik = monitoring.analizaObrazu("obraz_zagrożenie");
+		// Wtedy (then): powinno zostać wykryte zagrożenie
 		assertTrue(wynik);
 	}
 
@@ -77,7 +89,10 @@ public class MonitorowanieBezpieczenstwaTest {
 	@ValueSource(strings = { "", "null", "test", "inne" })
 	@DisplayName("AnalizaObrazu - Niepoprawne")
 	public void testAnalizaObrazu_Niepoprawne(String obraz) {
+		// Jeśli (given): niepoprawne nazwy obrazów
+		// Gdy (when): analizujemy niepoprawny obraz
 		boolean wynik = monitoring.analizaObrazu(obraz);
+		// Wtedy (then): nie powinno zostać wykryte zagrożenie
 		assertFalse(wynik);
 	}
 
@@ -85,7 +100,10 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(6)
 	@DisplayName("AnalizaObrazu - Null")
 	public void testAnalizaObrazu_Null() {
+		// Jeśli (given): obraz o wartości null
+		// Gdy (when): analizujemy null
 		boolean wynik = monitoring.analizaObrazu(null);
+		// Wtedy (then): nie powinno zostać wykryte zagrożenie
 		assertFalse(wynik);
 	}
 
@@ -93,8 +111,11 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(7)
 	@DisplayName("RozpocznijMonitoring - WykrycieZagrozenia")
 	public void testRozpocznijMonitoring_WykrycieZagrozenia() {
+		// Jeśli (given): bankomat niezablokowany
 		assertFalse(model.czyBankomatZablokowany());
+		// Gdy (when): rozpoczynamy monitoring (który wykrywa zagrożenie)
 		monitoring.rozpocznijMonitoring();
+		// Wtedy (then): bankomat powinien zostać zablokowany
 		assertTrue(model.czyBankomatZablokowany());
 	}
 
@@ -102,8 +123,11 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(8)
 	@DisplayName("ZatrzymajMonitoring")
 	public void testZatrzymajMonitoring() {
+		// Jeśli (given): monitoring aktywny
 		monitoring.rozpocznijMonitoring();
+		// Gdy (when): zatrzymujemy monitoring
 		monitoring.zatrzymajMonitoring();
+		// Wtedy (then): monitoring powinien być nieaktywny
 		assertFalse(monitoring.czyMonitoringAktywny());
 	}
 
@@ -111,8 +135,11 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(9)
 	@DisplayName("ObsluzZagrozenie")
 	public void testObsluzZagrozenie() {
+		// Jeśli (given): bankomat niezablokowany i monitoring aktywny
 		assertFalse(model.czyBankomatZablokowany());
+		// Gdy (when): obsługujemy zagrożenie
 		monitoring.obsluzZagrozenie(1);
+		// Wtedy (then): bankomat powinien być zablokowany, monitoring nieaktywny
 		assertTrue(model.czyBankomatZablokowany());
 		assertFalse(monitoring.czyMonitoringAktywny());
 	}
@@ -121,8 +148,11 @@ public class MonitorowanieBezpieczenstwaTest {
 	@Order(10)
 	@DisplayName("CzyMonitoringAktywny")
 	public void testCzyMonitoringAktywny() {
+		// Jeśli (given): monitoring nieaktywny
 		assertFalse(monitoring.czyMonitoringAktywny());
+		// Gdy (when): rozpoczynamy monitoring i sprawdzamy status
 		monitoring.rozpocznijMonitoring();
+		// Wtedy (then): sprawdzenie statusu nie powinno wyrzucić wyjątku
 		assertDoesNotThrow(() -> monitoring.czyMonitoringAktywny());
 	}
 }

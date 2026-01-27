@@ -53,6 +53,9 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(1)
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
+		// Jeśli (given): weryfikacja została utworzona w setUp()
+		// Gdy (when): sprawdzamy instancję weryfikacji
+		// Wtedy (then): weryfikacja nie powinna być null
 		assertNotNull(weryfikacja);
 	}
 
@@ -60,7 +63,10 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(2)
 	@DisplayName("WeryfikujPin - PoprawnyPin")
 	public void testWeryfikujPin_PoprawnyPin() {
+		// Jeśli (given): karta z poprawnym PIN-em
+		// Gdy (when): weryfikujemy poprawny PIN
 		boolean wynik = weryfikacja.weryfikujPin(100, "1234");
+		// Wtedy (then): weryfikacja powinna się udać
 		assertTrue(wynik);
 	}
 
@@ -68,7 +74,10 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(3)
 	@DisplayName("WeryfikujPin - NiepoprawnyPin")
 	public void testWeryfikujPin_NiepoprawnyPin() {
+		// Jeśli (given): karta z ustalonym PIN-em
+		// Gdy (when): weryfikujemy niepoprawny PIN
 		boolean wynik = weryfikacja.weryfikujPin(100, "0000");
+		// Wtedy (then): weryfikacja powinna się nie udać
 		assertFalse(wynik);
 	}
 
@@ -76,11 +85,15 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(4)
 	@DisplayName("WeryfikujPin - PoprawnyPinResetujeLicznik")
 	public void testWeryfikujPin_PoprawnyPinResetujeLicznik() {
+		// Jeśli (given): trzy nieudane próby weryfikacji
 		weryfikacja.weryfikujPin(100, "0000");
 		weryfikacja.weryfikujPin(100, "0000");
 		weryfikacja.weryfikujPin(100, "0000");
+		// Gdy (when): weryfikujemy poprawny PIN
 		boolean wynik = weryfikacja.weryfikujPin(100, "1234");
+		// Wtedy (then): weryfikacja powinna się udać i licznik być zresetowany
 		assertTrue(wynik);
+		// Wtedy (then): kolejna niepoprawna próba nie blokuje od razu karty
 		boolean wynik2 = weryfikacja.weryfikujPin(100, "0000");
 		assertFalse(wynik2);
 	}
@@ -89,10 +102,14 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(5)
 	@DisplayName("WeryfikujPin - MaksymalnaLiczbaProb")
 	public void testWeryfikujPin_MaksymalnaLiczbaProb() {
+		// Jeśli (given): karta niezablokowana
+		// Gdy (when): wykonujemy 5 nieudanych prób weryfikacji
 		for (int i = 0; i < 5; i++) {
 			weryfikacja.weryfikujPin(100, "0000");
 		}
+		// Wtedy (then): karta powinna zostać zablokowana
 		assertTrue(karta.czyZablokowana());
+		// Wtedy (then): nawet poprawny PIN nie przejdzie weryfikacji
 		boolean wynik = weryfikacja.weryfikujPin(100, "1234");
 		assertFalse(wynik);
 	}
@@ -101,12 +118,16 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(6)
 	@DisplayName("ResetujLicznik")
 	public void testResetujLicznik() {
+		// Jeśli (given): dwie nieudane próby weryfikacji
 		weryfikacja.weryfikujPin(100, "0000");
 		weryfikacja.weryfikujPin(100, "0000");
+		// Gdy (when): resetujemy licznik ręcznie
 		weryfikacja.resetujLicznik();
+		// Gdy (when): wykonujemy 5 kolejnych nieudanych prób
 		for (int i = 0; i < 5; i++) {
 			weryfikacja.weryfikujPin(100, "0000");
 		}
+		// Wtedy (then): karta powinna zostać zablokowana dopiero po 5 próbach
 		assertTrue(karta.czyZablokowana());
 	}
 
@@ -114,8 +135,11 @@ public class WeryfikacjaTozsamosciTest {
 	@Order(7)
 	@DisplayName("UstawStrategie")
 	public void testUstawStrategie() {
+		// Jeśli (given): strategia zabezpieczenia do ustawienia
 		IStrategiaZabezpieczenia strategia = new ZablokowanieKarty(model);
+		// Gdy (when): ustawiamy strategię
 		weryfikacja.ustawStrategie(strategia);
+		// Wtedy (then): ponowne ustawienie nie powinno wyrzucić wyjątku
 		assertDoesNotThrow(() -> weryfikacja.ustawStrategie(strategia));
 	}
 }

@@ -37,6 +37,9 @@ public class ZablokowanaKartaTest {
 	@Order(1)
 	@DisplayName("Konstruktor")
 	public void testKonstruktor() {
+		// Jeśli (given): zablokowana karta została utworzona w setUp()
+		// Gdy (when): sprawdzamy instancję zablokowanej karty
+		// Wtedy (then): karta nie powinna być null
 		assertNotNull(zablokowanaKarta);
 	}
 
@@ -44,6 +47,9 @@ public class ZablokowanaKartaTest {
 	@Order(2)
 	@DisplayName("CzyZablokowana")
 	public void testCzyZablokowana() {
+		// Jeśli (given): zablokowana karta
+		// Gdy (when): sprawdzamy czy karta jest zablokowana
+		// Wtedy (then): karta powinna być zablokowana
 		assertTrue(zablokowanaKarta.czyZablokowana());
 	}
 
@@ -51,6 +57,9 @@ public class ZablokowanaKartaTest {
 	@Order(3)
 	@DisplayName("SprawdzPin - ZawszeFalse")
 	public void testSprawdzPin_ZawszeFalse() {
+		// Jeśli (given): zablokowana karta
+		// Gdy (when): sprawdzamy PIN (poprawny lub niepoprawny)
+		// Wtedy (then): sprawdzenie zawsze powinno zwrócić false
 		assertFalse(zablokowanaKarta.sprawdzPin(PIN));
 		assertFalse(zablokowanaKarta.sprawdzPin("0000"));
 	}
@@ -59,8 +68,11 @@ public class ZablokowanaKartaTest {
 	@Order(4)
 	@DisplayName("ZmienSaldo - NieZmieniaSalda")
 	public void testZmienSaldo_NieZmieniaSalda() {
+		// Jeśli (given): zablokowana karta z początkowym saldem
 		BigDecimal saldoPrzed = zablokowanaKarta.pobierzSaldo();
+		// Gdy (when): próbujemy zmienić saldo zablokowanej karty
 		zablokowanaKarta.zmienSaldo(new BigDecimal("100.00"));
+		// Wtedy (then): saldo nie powinno się zmienić
 		BigDecimal saldoPo = zablokowanaKarta.pobierzSaldo();
 		assertEquals(saldoPrzed, saldoPo);
 	}
@@ -69,6 +81,9 @@ public class ZablokowanaKartaTest {
 	@Order(5)
 	@DisplayName("PobierzSaldo")
 	public void testPobierzSaldo() {
+		// Jeśli (given): zablokowana karta z początkowym saldem
+		// Gdy (when): pobieramy saldo
+		// Wtedy (then): saldo powinno być równe początkowemu saldowi
 		assertEquals(SALDO, zablokowanaKarta.pobierzSaldo());
 	}
 
@@ -76,6 +91,9 @@ public class ZablokowanaKartaTest {
 	@Order(6)
 	@DisplayName("DajId")
 	public void testDajId() {
+		// Jeśli (given): zablokowana karta z określonym ID
+		// Gdy (when): pobieramy ID karty
+		// Wtedy (then): ID powinno być zgodne z oczekiwanym
 		assertEquals(ID_KARTY, zablokowanaKarta.dajId());
 	}
 
@@ -83,6 +101,9 @@ public class ZablokowanaKartaTest {
 	@Order(7)
 	@DisplayName("DajDateBlokady")
 	public void testDajDateBlokady() {
+		// Jeśli (given): zablokowana karta z datą blokady
+		// Gdy (when): pobieramy datę blokady
+		// Wtedy (then): data powinna być zgodna z oczekiwaną
 		assertEquals(DATA_BLOKADY, zablokowanaKarta.dajDateBlokady());
 	}
 }
