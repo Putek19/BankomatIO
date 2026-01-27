@@ -10,10 +10,14 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("MonitorowanieBezpieczenstwaTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("kontroler")
+@Tag("bezpieczenstwo")
+@Tag("monitoring")
 public class MonitorowanieBezpieczenstwaTest {
 	private MonitorowanieBezpieczenstwa monitoring;
 	private Model model;
@@ -70,7 +74,7 @@ public class MonitorowanieBezpieczenstwaTest {
 
 	@ParameterizedTest
 	@Order(5)
-	@ValueSource(strings = {"", "null", "test", "inne"})
+	@ValueSource(strings = { "", "null", "test", "inne" })
 	@DisplayName("AnalizaObrazu - Niepoprawne")
 	public void testAnalizaObrazu_Niepoprawne(String obraz) {
 		boolean wynik = monitoring.analizaObrazu(obraz);

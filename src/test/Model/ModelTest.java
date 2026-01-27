@@ -7,12 +7,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 
 @DisplayName("ModelTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("model")
+@Tag("biznesowa")
 public class ModelTest {
 	private Model model;
 	private Inwentarz inwentarz;

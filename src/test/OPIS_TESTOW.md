@@ -15,7 +15,7 @@ uruchomienie: cd src -> ./run-tests.sh
 
 ## Testy Model
 
-### KartaTest (8 testów)
+### KartaTest (8 testów) @Tag("model", "karta", "saldo")
 - **Konstruktor**: ID=1, PIN="1234", saldo=1000.00
 - **Sprawdzanie PIN**: poprawny "1234", niepoprawny "0000", null
 - **Zmiana salda**: +100.00, -100.00
@@ -27,7 +27,7 @@ uruchomienie: cd src -> ./run-tests.sh
 - **Nowe nazwisko**: "Nowak"
 - **Nowy PESEL**: 987654321
 
-### DAOTest (8 testów)
+### DAOTest (8 testów) @Tag("model", "dao", "baza")
 - **Klienci**: "Jan Kowalski", "Klient 1", "Klient 2", "Klient 3"
 - **ID kart**: 1, 2 (niezależne blokady)
 
@@ -35,7 +35,7 @@ uruchomienie: cd src -> ./run-tests.sh
 - **Klienci**: nr=1 (imię="Jan"), nr=2 (imię="Anna"), nr=3 (imię="Piotr")
 - **Karta**: ID=100, PIN="1234", saldo=1000.00
 
-### ModelTest (12 testów)
+### ModelTest (12 testów) @Tag("model", "biznesowa")
 - **Karta**: ID=100, PIN="1234", saldo=1000.00
 - **Aktualizacja salda**: -100.00 (wynik: 900.00)
 - **Nieistniejąca karta**: ID=999
@@ -53,7 +53,7 @@ uruchomienie: cd src -> ./run-tests.sh
 
 ## Testy Kontroler
 
-### KontrolerKlientaTest (10 testów)
+### KontrolerKlientaTest (10 testów) @Tag("kontroler", "klient")
 - **Wypłata**: 150.00 PLN (saldo: 1000.00 → 850.00)
 - **Niewystarczające saldo**: 2000.00 PLN (saldo: 1000.00, nie zmienia się)
 - **Maksymalna kwota**: 5000.00 PLN (saldo zwiększone do 10000.00 → 5000.00)
@@ -63,13 +63,13 @@ uruchomienie: cd src -> ./run-tests.sh
 ### KontrolerAdministratoraTest (3 testy)
 - **ID bankomatu**: 1
 
-### WeryfikacjaTozsamosciTest (6 testów)
+### WeryfikacjaTozsamosciTest (6 testów) @Tag("kontroler", "weryfikacja", "bezpieczenstwo")
 - **Poprawny PIN**: "1234"
 - **Niepoprawny PIN**: "0000"
 - **Maksymalna liczba prób**: 5 niepoprawnych prób → blokada karty
 - **Reset licznika**: po 2 niepoprawnych próbach
 
-### WyplataGotowkiTest (9 testów)
+### WyplataGotowkiTest (9 testów) @Tag("kontroler", "wyplata", "saldo")
 - **Poprawna wypłata**: 150.00 PLN (saldo: 1000.00 → 850.00)
 - **Niewystarczające saldo**: 2000.00 PLN
 - **Kwota zero**: 0.00 PLN
@@ -78,7 +78,7 @@ uruchomienie: cd src -> ./run-tests.sh
 - **Przekroczona maksymalna**: 6000.00 PLN
 - **Nieistniejąca karta**: ID=999, kwota=100.00
 
-### MonitorowanieBezpieczenstwaTest (8 testów)
+### MonitorowanieBezpieczenstwaTest (8 testów) @Tag("kontroler", "bezpieczenstwo", "monitoring")
 - **Obrazy**: "obraz_bezpieczny", "obraz_zagrożenie"
 - **ID bankomatu**: 1
 - **Sekwencja monitoringu**: ["obraz_bezpieczny", "obraz_bezpieczny", "obraz_zagrożenie"]
@@ -89,6 +89,67 @@ uruchomienie: cd src -> ./run-tests.sh
 
 ### ZdalneBlokowanieBankomatuTest (2 testy)
 - **ID bankomatu**: 1
+
+## Testy z Mockowaniem (Zadanie 2)
+
+### WyplataGotowkiMockTest (8 testów) @Tag("kontroler", "mock", "wyplata")
+Używa Mockito do symulacji IModel.
+- **@Mock**: mockModel (IModel)
+- **@InjectMocks**: WyplataGotowki
+- **when().thenReturn()**: sprawdzSaldo zwraca BigDecimal
+- **when().thenThrow()**: symulacja wyjątku RuntimeException
+- **doNothing().when()**: aktualizujSaldo, zarejestrujZdarzenie
+- **verify()**, **times()**, **never()**, **atLeast()**, **atMost()**, **atMostOnce()**: weryfikacja wywołań
+- **InOrder**: sprawdzenie kolejności wywołań
+
+### WeryfikacjaTozsamosciMockTest (8 testów) @Tag("kontroler", "mock", "weryfikacja", "bezpieczenstwo")
+Używa Mockito do symulacji IModel i IStrategiaZabezpieczenia.
+- **@Mock**: mockModel (IModel), mockStrategia (IStrategiaZabezpieczenia)
+- **@InjectMocks**: WeryfikacjaTozsamosci z wstrzykniętą symulacją strategii
+- **when().thenReturn()**: sprawdzPin zwraca boolean
+- **when().thenThrow()**: symulacja wyjątku połączenia
+- **doNothing().when()**: wykonajReakcje
+- **verify()**, **never()**, **atMost()**: weryfikacja wywołań
+- **InOrder**: sprawdzenie kolejności wywołań
+
+### MonitorowanieBezpieczenstwaMockTest (8 testów) @Tag("kontroler", "mock", "bezpieczenstwo", "monitoring")
+Używa Mockito do symulacji IModel.
+- **@Mock**: mockModel (IModel)
+- **@InjectMocks**: MonitorowanieBezpieczenstwa
+- **doNothing().when()**: zablokujBankomat, zarejestrujZdarzenie
+- **doThrow().when()**: symulacja wyjątku przy rejestracji zdarzenia
+- **verify()**, **times()**, **atLeast()**: weryfikacja wywołań
+- **InOrder**: sprawdzenie kolejności wywołań
+
+## Zestawy Testów (Zadanie 3)
+
+### SuiteModel
+- **@Suite**: zestaw testów
+- **@SuiteDisplayName**: "Zestaw testów warstwy encji (Model)"
+- **@SelectPackages**: "Model"
+- Uruchamia wszystkie testy z pakietu Model
+
+### SuiteKontroler
+- **@Suite**: zestaw testów
+- **@SuiteDisplayName**: "Zestaw testów warstwy kontroli (Kontroler)"
+- **@SelectPackages**: "Kontroler"
+- Uruchamia wszystkie testy z pakietu Kontroler
+
+### SuiteBezpieczenstwo
+- **@Suite**: zestaw testów
+- **@SuiteDisplayName**: "Zestaw testów bezpieczeństwa (bez mocków)"
+- **@SelectPackages**: {"Model", "Kontroler"}
+- **@IncludeTags**: "bezpieczenstwo"
+- **@ExcludeTags**: "mock"
+- Praktyczne zastosowanie: testowanie funkcji bezpieczeństwa bez symulacji
+
+### SuiteMock
+- **@Suite**: zestaw testów
+- **@SuiteDisplayName**: "Zestaw testów z symulacją (Mockito)"
+- **@SelectPackages**: {"Model", "Kontroler"}
+- **@IncludeTags**: "mock"
+- **@ExcludeTags**: "saldo"
+- Praktyczne zastosowanie: szybkie testy izolowane od rzeczywistych zależności
 
 ## Scenariusze Testowe
 
@@ -109,3 +170,20 @@ uruchomienie: cd src -> ./run-tests.sh
 1. **Monitoring**: wykrywa "obraz_zagrożenie" → blokuje bankomat
 2. **Blokada karty**: po 5 niepoprawnych próbach PIN
 3. **Zdalne blokowanie**: administrator blokuje bankomat ID=1
+
+## Użyte Tagi
+
+- **model**: testy warstwy encji
+- **kontroler**: testy warstwy kontroli
+- **karta**: testy klasy Karta
+- **saldo**: testy operujące na saldzie
+- **dao**: testy klasy DAO
+- **baza**: testy związane z bazą danych
+- **biznesowa**: testy logiki biznesowej
+- **klient**: testy obsługi klienta
+- **weryfikacja**: testy weryfikacji tożsamości
+- **bezpieczenstwo**: testy funkcji bezpieczeństwa
+- **wyplata**: testy wypłaty gotówki
+- **monitoring**: testy monitorowania
+- **mock**: testy z użyciem symulacji (Mockito)
+

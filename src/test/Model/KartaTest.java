@@ -10,12 +10,16 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 
 @DisplayName("KartaTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("model")
+@Tag("karta")
+@Tag("saldo")
 public class KartaTest {
 	private Karta karta;
 	private static final int ID_KARTY = 1;
@@ -51,7 +55,7 @@ public class KartaTest {
 
 	@ParameterizedTest
 	@Order(3)
-	@ValueSource(strings = {"0000", "1111", "9999", ""})
+	@ValueSource(strings = { "0000", "1111", "9999", "" })
 	@DisplayName("SprawdzPin - NiepoprawnyPin")
 	public void testSprawdzPin_NiepoprawnyPin(String niepoprawnyPin) {
 		assertFalse(karta.sprawdzPin(niepoprawnyPin));
@@ -66,7 +70,7 @@ public class KartaTest {
 
 	@ParameterizedTest
 	@Order(5)
-	@CsvSource({"100.00,1100.00", "50.00,1050.00", "200.00,1200.00"})
+	@CsvSource({ "100.00,1100.00", "50.00,1050.00", "200.00,1200.00" })
 	@DisplayName("ZmienSaldo - DodatniaKwota")
 	public void testZmienSaldo_DodatniaKwota(String kwotaStr, String oczekiwaneStr) {
 		BigDecimal kwota = new BigDecimal(kwotaStr);

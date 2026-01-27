@@ -8,12 +8,16 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 
 @DisplayName("WeryfikacjaTozsamosciTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("kontroler")
+@Tag("weryfikacja")
+@Tag("bezpieczenstwo")
 public class WeryfikacjaTozsamosciTest {
 	private WeryfikacjaTozsamosci weryfikacja;
 	private Model model;

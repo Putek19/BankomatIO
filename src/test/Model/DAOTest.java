@@ -7,10 +7,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("DAOTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("model")
+@Tag("dao")
+@Tag("baza")
 public class DAOTest {
 	private DAO dao;
 

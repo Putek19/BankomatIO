@@ -8,12 +8,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 
 @DisplayName("KontrolerKlientaTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("kontroler")
+@Tag("klient")
 public class KontrolerKlientaTest {
 	private KontrolerKlienta kontroler;
 	private Model model;

@@ -10,12 +10,16 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.api.Tag;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.math.BigDecimal;
 
 @DisplayName("WyplataGotowkiTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@Tag("kontroler")
+@Tag("wyplata")
+@Tag("saldo")
 public class WyplataGotowkiTest {
 	private WyplataGotowki wyplata;
 	private Model model;
@@ -116,7 +120,7 @@ public class WyplataGotowkiTest {
 
 	@ParameterizedTest
 	@Order(7)
-	@CsvSource({"5000.0,10000.00,5000.00", "3000.0,5000.00,2000.00", "1000.0,2000.00,1000.00"})
+	@CsvSource({ "5000.0,10000.00,5000.00", "3000.0,5000.00,2000.00", "1000.0,2000.00,1000.00" })
 	@DisplayName("RealizujWyplate - MaksymalnaKwota")
 	public void testRealizujWyplate_MaksymalnaKwota(double kwota, String saldoStr, String oczekiwaneStr) {
 		BigDecimal saldoPrzed = new BigDecimal(saldoStr);
