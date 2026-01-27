@@ -1,5 +1,18 @@
 # Opis Testów JUnit 5
-uruchomienie: cd src -> ./run-tests.sh
+
+## Uruchomienie testów
+
+### Wszystkie testy (Model + Kontroler)
+```bash
+cd src
+./run-tests.sh
+```
+
+### Tylko przypadki użycia (Kontroler)
+```bash
+cd src
+./test_pu.sh  # Wymaga wcześniejszego ./run-tests.sh
+```
 ## Dane Testowe
 
 ### Podstawowe wartości używane w testach:

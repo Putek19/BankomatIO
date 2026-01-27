@@ -83,14 +83,44 @@ Utworzono kompleksowe testy jednostkowe dla wszystkich komponentów:
 - `FabrykaKlientaTest` - testy fabryki klientów
 - `ZablokowanaKartaTest` - testy dekoratora zablokowanej karty
 
-### Testy Kontroler
+### Testy Kontroler (Przypadki użycia)
 - `KontrolerKlientaTest` - testy kontrolera klienta
 - `KontrolerAdministratoraTest` - testy kontrolera administratora
-- `WeryfikacjaTozsamosciTest` - testy weryfikacji PIN
-- `WyplataGotowkiTest` - testy wypłaty gotówki
-- `MonitorowanieBezpieczenstwaTest` - testy monitoringu
+- `WeryfikacjaTozsamosciTest` + `WeryfikacjaTozsamosciMockTest` - testy weryfikacji PIN
+- `WyplataGotowkiTest` + `WyplataGotowkiMockTest` - testy wypłaty gotówki
+- `MonitorowanieBezpieczenstwaTest` + `MonitorowanieBezpieczenstwaMockTest` - testy monitoringu
 - `ZablokowanieKartyTest` - testy blokowania karty
 - `ZdalneBlokowanieBankomatuTest` - testy zdalnego blokowania
+
+### Zestawy testów (Test Suites)
+- `SuiteModel` - wszystkie testy warstwy Model
+- `SuiteKontroler` - wszystkie testy warstwy Kontroler
+- `SuiteMock` - tylko testy z Mockito
+- `SuiteBezpieczenstwo` - tylko testy bezpieczeństwa (bez mocków)
+
+### Skrypty testowe
+
+**`run-tests.sh`** - Uruchamia wszystkie testy (Model + Kontroler)
+```bash
+cd src
+./run-tests.sh
+```
+- Pobiera biblioteki (JUnit, Mockito) przy pierwszym uruchomieniu
+- Kompiluje kod źródłowy i testy
+- Uruchamia ~85+ testów
+- Czas: ~10-15 sekund
+
+**`test_pu.sh`** - Uruchamia tylko testy przypadków użycia (Kontroler)
+```bash
+cd src
+./test_pu.sh
+```
+- Wymaga wcześniejszego uruchomienia `run-tests.sh`
+- Uruchamia ~35 testów warstwy Kontroler
+- Szybsze iteracje podczas developmentu
+- Czas: ~5-7 sekund
+
+**Dokumentacja skryptów**: Zobacz `src/SKRYPTY_TESTOWE.md` dla szczegółowej instrukcji
 
 ## Wnioski
 
