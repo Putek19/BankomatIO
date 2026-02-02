@@ -1,0 +1,16 @@
+---
+Suite
+---
+!define TEST_SYSTEM {slim}
+!define SLIM_VERSION {0.3}
+!define COMMAND_PATTERN {java -Djava.security.manager=allow --add-opens java.base/java.lang=ALL-UNNAMED -cp %p %m}
+
+Testy akceptacyjne systemu bankomatu - realizacja przypadków użycia
+
+!path /Users/daniel/Desktop/io/BankomatIO/target/classes
+!path /Users/daniel/Desktop/io/BankomatIO/target/test-classes
+!path /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar
+!path /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/commons-lang3-3.12.0.jar
+!path /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/commons-text-1.10.0.jar
+!path /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/htmlparser-2.1.jar
+!path /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/json-20230227.jar

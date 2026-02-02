@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20230503</FitNesseVersion>
+  <rootPath>FrontPage.TestWyplatyGotowki</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>1</exceptions>
+    </counts>
+    <date>2026-02-02T10:01:06+01:00</date>
+    <runTimeInMillis>87</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.SetUp"&gt;.FrontPage.SetUp&lt;/a&gt; &lt;a href="FrontPage.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;div class="contents"&gt;
+	&lt;b&gt;Contents:&lt;/b&gt;
+	&lt;ul class="toc1"/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Test akceptacyjny przypadku użycia: Wypłata gotówki z bankomatu&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="6" class="error"&gt;testyfitnesse.TestWyplatyGotowki&lt;hr/&gt; &lt;span class="fit_label"&gt;Could not find fixture: testyfitnesse.TestWyplatyGotowki.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;idKarty&lt;/td&gt;
+		&lt;td&gt;pin&lt;/td&gt;
+		&lt;td&gt;kwotaWyplaty&lt;/td&gt;
+		&lt;td&gt;wykonajWyplateGotowki?&lt;/td&gt;
+		&lt;td&gt;sprawdzSaldoPoWyplacie?&lt;/td&gt;
+		&lt;td&gt;sprawdzCzyKartaNieZablokowana?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1001&lt;/td&gt;
+		&lt;td&gt;1234&lt;/td&gt;
+		&lt;td&gt;100.00&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;900.0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1001&lt;/td&gt;
+		&lt;td&gt;1234&lt;/td&gt;
+		&lt;td&gt;200.00&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;700.0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1002&lt;/td&gt;
+		&lt;td&gt;5678&lt;/td&gt;
+		&lt;td&gt;50.00&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+		&lt;td&gt;450.0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1001&lt;/td&gt;
+		&lt;td&gt;9999&lt;/td&gt;
+		&lt;td&gt;100.00&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;700.0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1003&lt;/td&gt;
+		&lt;td&gt;9999&lt;/td&gt;
+		&lt;td&gt;6000.00&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;2500.0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;1002&lt;/td&gt;
+		&lt;td&gt;5678&lt;/td&gt;
+		&lt;td&gt;500.00&lt;/td&gt;
+		&lt;td&gt;false&lt;/td&gt;
+		&lt;td&gt;450.0&lt;/td&gt;
+		&lt;td&gt;true&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestWyplatyGotowki</relativePageName>
+  </result>
+  <executionLog>
+    <testSystem>fit:fit.FitServer</testSystem>
+    <command>java -cp /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar fit.FitServer MacBookPro.lan 56167 3863</command>
+    <exitCode>1</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>627</totalRunTimeInMillis>
+</testResults>
+

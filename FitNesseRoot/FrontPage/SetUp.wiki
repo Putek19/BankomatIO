@@ -1,0 +1,6 @@
+---
+Help: Testy akceptacyjne systemu bankomatu - realizacja przypadków użycia
+---
+
+!path /Users/daniel/Desktop/io/BankomatIO/target/classes
+!path /Users/daniel/Desktop/io/BankomatIO/target/test-classes

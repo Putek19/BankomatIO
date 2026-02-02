@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20230503</FitNesseVersion>
+  <rootPath>FrontPage.BankomatIoSuite</rootPath>
+  <date>2026-02-02T10:34:32+01:00</date>
+  <pageHistoryLink>FrontPage.BankomatIoSuite?pageHistory&amp;resultDate=20260202103432</pageHistoryLink>
+  <pageHistoryReference>
+    <name>FrontPage.BankomatIoSuite.TestMonitorowaniaBezpieczenstwa</name>
+    <date>2026-02-02T10:34:32+01:00</date>
+    <pageHistoryLink>FrontPage.BankomatIoSuite.TestMonitorowaniaBezpieczenstwa?pageHistory&amp;resultDate=20260202103432</pageHistoryLink>
+    <counts>
+      <right>7</right>
+      <wrong>1</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>255</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FrontPage.BankomatIoSuite.TestWeryfikacjiTozsamosci</name>
+    <date>2026-02-02T10:34:33+01:00</date>
+    <pageHistoryLink>FrontPage.BankomatIoSuite.TestWeryfikacjiTozsamosci?pageHistory&amp;resultDate=20260202103433</pageHistoryLink>
+    <counts>
+      <right>14</right>
+      <wrong>4</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>45</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FrontPage.BankomatIoSuite.TestWyplataGotowki</name>
+    <date>2026-02-02T10:34:33+01:00</date>
+    <pageHistoryLink>FrontPage.BankomatIoSuite.TestWyplataGotowki?pageHistory&amp;resultDate=20260202103433</pageHistoryLink>
+    <counts>
+      <right>15</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>40</runTimeInMillis>
+  </pageHistoryReference>
+  <pageHistoryReference>
+    <name>FrontPage.BankomatIoSuite.ZdalneBlokowanieBankomatu</name>
+    <date>2026-02-02T10:34:33+01:00</date>
+    <pageHistoryLink>FrontPage.BankomatIoSuite.ZdalneBlokowanieBankomatu?pageHistory&amp;resultDate=20260202103433</pageHistoryLink>
+    <counts>
+      <right>4</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>28</runTimeInMillis>
+  </pageHistoryReference>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -Djava.security.manager=allow --add-opens java.base/java.lang=ALL-UNNAMED -cp /Users/daniel/Desktop/io/BankomatIO/target/classes:/Users/daniel/Desktop/io/BankomatIO/target/test-classes:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-suite-engine-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/htmlparser-2.1.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/velocity-engine-core-2.3.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-api-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/objenesis-3.3.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/mockito-junit-jupiter-5.8.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-suite-api-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-params-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/byte-buddy-agent-1.14.10.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-launcher-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/byte-buddy-1.14.10.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/slf4j-api-2.0.7.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-commons-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/json-20230227.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-engine-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/apiguardian-api-1.1.2.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/opentest4j-1.3.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/diffutils-1.3.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/slf4j-jdk14-2.0.7.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/commons-lang3-3.12.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/htmllexer-2.1.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/mockito-core-5.8.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-suite-commons-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-engine-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/commons-text-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut>WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by fitnesse.slim.instructions.SystemExitSecurityManager (file:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar)
+WARNING: Please consider reporting this to the maintainers of fitnesse.slim.instructions.SystemExitSecurityManager
+WARNING: System::setSecurityManager will be removed in a future release
+[LOG] Analiza obrazu: obraz_bezpieczny
+
+[LOG] Analiza obrazu: obraz_normalny
+
+[LOG] Analiza obrazu: obraz_zagrożenie
+
+[LOG] Analiza obrazu: symulacja_napadu
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1001
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1002
+
+[LOG] Nieudana weryfikacja tożsamości dla karty: 1001
+
+[LOG] Nieudana weryfikacja tożsamości dla karty: 1003
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1003
+
+[LOG] Nieudana weryfikacja tożsamości dla karty: 9999
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1001
+
+[LOG] Zmiana salda karty 1001 o kwotę: -100
+
+[LOG] Zrealizowano wypłatę gotówki: 100.0 z karty: 1001
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1001
+
+[LOG] Zmiana salda karty 1001 o kwotę: -200
+
+[LOG] Zrealizowano wypłatę gotówki: 200.0 z karty: 1001
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1002
+
+[LOG] Zmiana salda karty 1002 o kwotę: -50
+
+[LOG] Zrealizowano wypłatę gotówki: 50.0 z karty: 1002
+
+[LOG] Nieudana weryfikacja tożsamości dla karty: 1001
+
+[LOG] Pomyślna weryfikacja tożsamości dla karty: 1003
+
+[LOG] Przekroczono maksymalną kwotę wypłaty
+
+[LOG] Nie udało się zrealizować wypłaty gotówki: 6000.0
+
+[LOG] Bankomat został zablokowany
+
+[LOG] Zdalne zablokowanie bankomatu przez administratora
+
+[LOG] Bankomat został odblokowany
+
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>2</right>
+    <wrong>2</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>732</totalRunTimeInMillis>
+</suiteResults>
+

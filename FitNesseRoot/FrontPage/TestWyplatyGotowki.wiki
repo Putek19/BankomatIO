@@ -1,0 +1,10 @@
+Test akceptacyjny przypadku użycia: Wypłata gotówki z bankomatu
+
+!|testyfitnesse.TestWyplatyGotowki                                                                      |
+|idKarty|pin |kwotaWyplaty|wykonajWyplateGotowki?|sprawdzSaldoPoWyplacie?|sprawdzCzyKartaNieZablokowana?|
+|1001   |1234|100.00      |true                  |900.0                  |true                          |
+|1001   |1234|200.00      |true                  |700.0                  |true                          |
+|1002   |5678|50.00       |true                  |450.0                  |true                          |
+|1001   |9999|100.00      |false                 |700.0                  |true                          |
+|1003   |9999|6000.00     |false                 |2500.0                 |true                          |
+|1002   |5678|500.00      |false                 |450.0                  |true                          |

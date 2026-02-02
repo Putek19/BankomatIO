@@ -56,7 +56,7 @@ fi
 # Tworzymy classpath dla bibliotek
 LIB_CP="${LIB_DIR}/${JUNIT_JAR}:${LIB_DIR}/${MOCKITO_JAR}:${LIB_DIR}/${BYTEBUDDY_JAR}:${LIB_DIR}/${BYTEBUDDY_AGENT_JAR}:${LIB_DIR}/${OBJENESIS_JAR}:${LIB_DIR}/${SUITE_API_JAR}:${LIB_DIR}/${SUITE_ENGINE_JAR}:${LIB_DIR}/${SUITE_COMMONS_JAR}"
 
-echo "📋 Przypadki użycia do przetestowania:"
+echo " Przypadki użycia do przetestowania:"
 echo "   • Obsługa klienta (KontrolerKlientaTest)"
 echo "   • Obsługa administratora (KontrolerAdministratoraTest)"
 echo "   • Wypłata gotówki (WyplataGotowkiTest, WyplataGotowkiMockTest)"
@@ -78,13 +78,11 @@ EXIT_CODE=$?
 
 echo ""
 if [ $EXIT_CODE -eq 0 ]; then
-    echo "╔════════════════════════════════════════════════════════════════╗"
-    echo "║  ✅ WSZYSTKIE TESTY PRZYPADKÓW UŻYCIA PRZESZŁY POMYŚLNIE      ║"
-    echo "╚════════════════════════════════════════════════════════════════╝"
+
+    echo "WSZYSTKIE TESTY PRZYPADKÓW UŻYCIA PRZESZŁY POMYŚLNIE"
+
 else
-    echo "╔════════════════════════════════════════════════════════════════╗"
-    echo "║  ❌ NIEKTÓRE TESTY PRZYPADKÓW UŻYCIA NIE POWIODŁY SIĘ         ║"
-    echo "╚════════════════════════════════════════════════════════════════╝"
+    echo "NIEKTÓRE TESTY PRZYPADKÓW UŻYCIA NIE POWIODŁY SIĘ"
 fi
 
 exit $EXIT_CODE

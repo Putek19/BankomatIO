@@ -1,0 +1,772 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20230503</FitNesseVersion>
+  <rootPath>FrontPage.BankomatIO.TestWyplataGotowki</rootPath>
+  <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>15</exceptions>
+    </counts>
+    <date>2026-02-02T10:16:55+01:00</date>
+    <runTimeInMillis>335</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.SetUp"&gt;.FrontPage.SetUp&lt;/a&gt; &lt;a href="FrontPage.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/daniel/Desktop/io/BankomatIO/target/classes&lt;/span&gt;&lt;br/&gt;&lt;span class="meta"&gt;classpath: /Users/daniel/Desktop/io/BankomatIO/target/test-classes&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Test przypadku użycia: Wypłata gotówki z bankomatu&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="6"&gt;&lt;span class="pass"&gt;testyfitnesse.TestWyplatyGotowki&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;idKarty&lt;/td&gt;
+		&lt;td&gt;pin&lt;/td&gt;
+		&lt;td&gt;kwotaWyplaty&lt;/td&gt;
+		&lt;td&gt;wykonajWyplateGotowki?&lt;/td&gt;
+		&lt;td&gt;sprawdzSaldoPoWyplacie?&lt;/td&gt;
+		&lt;td&gt;sprawdzCzyKartaNieZablokowana?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1001&lt;/td&gt;
+		&lt;td&gt;1234&lt;/td&gt;
+		&lt;td&gt;100.00&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.DAO.pobierzLiczbeZdarzen()" because "testyfitnesse.SetUp.dao" is null
+	at testyfitnesse.TestWyplatyGotowki.pobierzLiczbeTransakcji(TestWyplatyGotowki.java:46) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at testyfitnesse.TestWyplatyGotowki.wykonajWyplateGotowki(TestWyplatyGotowki.java:24) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;900.0&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Model.sprawdzSaldo(int)" because "testyfitnesse.SetUp.model" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzSaldoPoWyplacie(TestWyplatyGotowki.java:41) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Inwentarz.pobierzWszystkichKlientow()" because "testyfitnesse.SetUp.inwentarz" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzCzyKartaNieZablokowana(TestWyplatyGotowki.java:50) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;1001&lt;/td&gt;
+		&lt;td&gt;1234&lt;/td&gt;
+		&lt;td&gt;200.00&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.DAO.pobierzLiczbeZdarzen()" because "testyfitnesse.SetUp.dao" is null
+	at testyfitnesse.TestWyplatyGotowki.pobierzLiczbeTransakcji(TestWyplatyGotowki.java:46) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at testyfitnesse.TestWyplatyGotowki.wykonajWyplateGotowki(TestWyplatyGotowki.java:24) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;700.0&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Model.sprawdzSaldo(int)" because "testyfitnesse.SetUp.model" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzSaldoPoWyplacie(TestWyplatyGotowki.java:41) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Inwentarz.pobierzWszystkichKlientow()" because "testyfitnesse.SetUp.inwentarz" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzCzyKartaNieZablokowana(TestWyplatyGotowki.java:50) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1002&lt;/td&gt;
+		&lt;td&gt;5678&lt;/td&gt;
+		&lt;td&gt;50.00&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.DAO.pobierzLiczbeZdarzen()" because "testyfitnesse.SetUp.dao" is null
+	at testyfitnesse.TestWyplatyGotowki.pobierzLiczbeTransakcji(TestWyplatyGotowki.java:46) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at testyfitnesse.TestWyplatyGotowki.wykonajWyplateGotowki(TestWyplatyGotowki.java:24) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;450.0&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Model.sprawdzSaldo(int)" because "testyfitnesse.SetUp.model" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzSaldoPoWyplacie(TestWyplatyGotowki.java:41) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Inwentarz.pobierzWszystkichKlientow()" because "testyfitnesse.SetUp.inwentarz" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzCzyKartaNieZablokowana(TestWyplatyGotowki.java:50) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;1001&lt;/td&gt;
+		&lt;td&gt;9999&lt;/td&gt;
+		&lt;td&gt;100.00&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;false&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.DAO.pobierzLiczbeZdarzen()" because "testyfitnesse.SetUp.dao" is null
+	at testyfitnesse.TestWyplatyGotowki.pobierzLiczbeTransakcji(TestWyplatyGotowki.java:46) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at testyfitnesse.TestWyplatyGotowki.wykonajWyplateGotowki(TestWyplatyGotowki.java:24) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;700.0&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Model.sprawdzSaldo(int)" because "testyfitnesse.SetUp.model" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzSaldoPoWyplacie(TestWyplatyGotowki.java:41) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Inwentarz.pobierzWszystkichKlientow()" because "testyfitnesse.SetUp.inwentarz" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzCzyKartaNieZablokowana(TestWyplatyGotowki.java:50) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;1003&lt;/td&gt;
+		&lt;td&gt;9999&lt;/td&gt;
+		&lt;td&gt;6000.00&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;false&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.DAO.pobierzLiczbeZdarzen()" because "testyfitnesse.SetUp.dao" is null
+	at testyfitnesse.TestWyplatyGotowki.pobierzLiczbeTransakcji(TestWyplatyGotowki.java:46) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at testyfitnesse.TestWyplatyGotowki.wykonajWyplateGotowki(TestWyplatyGotowki.java:24) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;2500.0&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Model.sprawdzSaldo(int)" because "testyfitnesse.SetUp.model" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzSaldoPoWyplacie(TestWyplatyGotowki.java:41) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;table&gt;&lt;tr class="exception closed"&gt;&lt;td&gt; &lt;span class="error"&gt;true&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="exception-detail closed-detail"&gt;&lt;td&gt;__EXCEPTION__:java.lang.NullPointerException: Cannot invoke "Model.Inwentarz.pobierzWszystkichKlientow()" because "testyfitnesse.SetUp.inwentarz" is null
+	at testyfitnesse.TestWyplatyGotowki.sprawdzCzyKartaNieZablokowana(TestWyplatyGotowki.java:50) [file:/Users/daniel/Desktop/io/BankomatIO/target/test-classes/]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) [n/a]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) [rt.jar]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.methodInvoke(SimpleInteraction.java:322) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.callMethod(SimpleInteraction.java:307) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.invokeMethod(SimpleInteraction.java:290) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.fixtureInteraction.SimpleInteraction.findAndInvoke(SimpleInteraction.java:217) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.MethodExecutor.findAndInvoke(MethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.FixtureMethodExecutor.execute(FixtureMethodExecutor.java:18) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.getMethodExecutionResult(StatementExecutor.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.StatementExecutor.call(StatementExecutor.java:112) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.CallAndOptionalAssignInstruction.executeInternal(CallAndOptionalAssignInstruction.java:30) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.instructions.Instruction.execute(Instruction.java:29) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatement(ListExecutor.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor$Executive.executeStatements(ListExecutor.java:43) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.ListExecutor.execute(ListExecutor.java:85) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.executeInstructions(SlimServer.java:84) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.processOneSetOfInstructions(SlimServer.java:77) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.tryProcessInstructions(SlimServer.java:64) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimServer.serve(SlimServer.java:49) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.handle(SlimService.java:169) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.acceptOne(SlimService.java:177) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.accept(SlimService.java:139) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.startWithFactory(SlimService.java:92) [fitnesse-20230503.jar:20230503]
+	at fitnesse.slim.SlimService.main(SlimService.java:57) [fitnesse-20230503.jar:20230503]&lt;/td&lt;/tr&gt;&lt;/table&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestWyplataGotowki</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='testyfitnesse.TestWyplatyGotowki', args=[]}</instruction>
+        <slimResult>pass(testyfitnesse.TestWyplatyGotowki)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>testyfitnesse.TestWyplatyGotowki</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_4', instruction='call', instanceName='decisionTable_0', methodName='setIdKarty', args=[1001]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_5', instruction='call', instanceName='decisionTable_0', methodName='setPin', args=[1234]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_5</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_6', instruction='call', instanceName='decisionTable_0', methodName='setKwotaWyplaty', args=[100.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_6</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_8', instruction='call', instanceName='decisionTable_0', methodName='wykonajWyplateGotowki', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_8</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_9', instruction='call', instanceName='decisionTable_0', methodName='sprawdzSaldoPoWyplacie', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_9</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_10', instruction='call', instanceName='decisionTable_0', methodName='sprawdzCzyKartaNieZablokowana', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_10</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_12', instruction='call', instanceName='decisionTable_0', methodName='setIdKarty', args=[1001]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_12</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_13', instruction='call', instanceName='decisionTable_0', methodName='setPin', args=[1234]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_13</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_14', instruction='call', instanceName='decisionTable_0', methodName='setKwotaWyplaty', args=[200.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_14</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_16', instruction='call', instanceName='decisionTable_0', methodName='wykonajWyplateGotowki', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_16</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_17', instruction='call', instanceName='decisionTable_0', methodName='sprawdzSaldoPoWyplacie', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_17</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_18', instruction='call', instanceName='decisionTable_0', methodName='sprawdzCzyKartaNieZablokowana', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_18</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_20', instruction='call', instanceName='decisionTable_0', methodName='setIdKarty', args=[1002]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_20</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_21', instruction='call', instanceName='decisionTable_0', methodName='setPin', args=[5678]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_21</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_22', instruction='call', instanceName='decisionTable_0', methodName='setKwotaWyplaty', args=[50.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_22</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_24', instruction='call', instanceName='decisionTable_0', methodName='wykonajWyplateGotowki', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_24</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_25', instruction='call', instanceName='decisionTable_0', methodName='sprawdzSaldoPoWyplacie', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_25</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_26', instruction='call', instanceName='decisionTable_0', methodName='sprawdzCzyKartaNieZablokowana', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_26</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_28', instruction='call', instanceName='decisionTable_0', methodName='setIdKarty', args=[1001]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_28</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_29', instruction='call', instanceName='decisionTable_0', methodName='setPin', args=[9999]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_29</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_30', instruction='call', instanceName='decisionTable_0', methodName='setKwotaWyplaty', args=[100.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_30</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_32', instruction='call', instanceName='decisionTable_0', methodName='wykonajWyplateGotowki', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_32</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_33', instruction='call', instanceName='decisionTable_0', methodName='sprawdzSaldoPoWyplacie', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_33</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_34', instruction='call', instanceName='decisionTable_0', methodName='sprawdzCzyKartaNieZablokowana', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_34</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_36', instruction='call', instanceName='decisionTable_0', methodName='setIdKarty', args=[1003]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_36</instructionId>
+          <col>0</col>
+          <row>6</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_37', instruction='call', instanceName='decisionTable_0', methodName='setPin', args=[9999]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_37</instructionId>
+          <col>1</col>
+          <row>6</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_38', instruction='call', instanceName='decisionTable_0', methodName='setKwotaWyplaty', args=[6000.00]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_0_38</instructionId>
+          <col>2</col>
+          <row>6</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_40', instruction='call', instanceName='decisionTable_0', methodName='wykonajWyplateGotowki', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_40</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_41', instruction='call', instanceName='decisionTable_0', methodName='sprawdzSaldoPoWyplacie', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_41</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_42', instruction='call', instanceName='decisionTable_0', methodName='sprawdzCzyKartaNieZablokowana', args=[]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_0_42</instructionId>
+          <type>ReturnedValueExpectation</type>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem></testSystem>
+    <command></command>
+    <exitCode>0</exitCode>
+    <stdOut>WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by fitnesse.slim.instructions.SystemExitSecurityManager (file:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar)
+WARNING: Please consider reporting this to the maintainers of fitnesse.slim.instructions.SystemExitSecurityManager
+WARNING: System::setSecurityManager will be removed in a future release
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>335</totalRunTimeInMillis>
+</testResults>
+

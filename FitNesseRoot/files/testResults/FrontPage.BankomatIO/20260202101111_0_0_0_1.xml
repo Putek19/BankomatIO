@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20230503</FitNesseVersion>
+  <rootPath>FrontPage.BankomatIO</rootPath>
+  <date>2026-02-02T10:11:11+01:00</date>
+  <pageHistoryLink>FrontPage.BankomatIO?pageHistory&amp;resultDate=20260202101111</pageHistoryLink>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -cp /Users/daniel/Desktop/io/BankomatIO/target/classes:/Users/daniel/Desktop/io/BankomatIO/target/test-classes:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>98</exitCode>
+    <stdOut></stdOut>
+    <stdErr></stdErr>
+    <exception>The Security Manager is deprecated and will be removed in a future release</exception>
+    <exception>java.lang.UnsupportedOperationException: The Security Manager is deprecated and will be removed in a future release</exception>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>309</totalRunTimeInMillis>
+</suiteResults>
+

@@ -1,0 +1,10 @@
+---
+Help: Lists tests failed during last run, so they can be run again (without running all tests that passed).
+Suite
+---
+
+!note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
+
+Tests failed (first failure was at 2026-02-02T10:06:46.091752):
+
+!see [[FrontPage.TestWyplatyGotowki][.FrontPage.TestWyplatyGotowki]]

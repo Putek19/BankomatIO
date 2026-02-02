@@ -1,0 +1,8 @@
+Test przypadku użycia: Monitorowanie bezpieczeństwa - analiza obrazu i automatyczne blokowanie
+
+!|testyfitnesse.TestMonitorowaniaBezpieczenstwa|
+|strumienObrazow          |analizujIZareaguj?|sprawdzCzyBankomatZablokowany?|
+|obraz_bezpieczny         |false             |false                         |
+|obraz_normalny           |false             |false                         |
+|obraz_zagrożenie         |true              |true                          |
+|symulacja_zagrożenie     |true              |true                          |

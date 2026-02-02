@@ -128,7 +128,7 @@ public class KlientTest {
 	public void testWielokrotneKarty(int idKarty, String pin, String saldo) {
 		// Jeśli (given): karta z różnymi parametrami
 		IKarta karta = new Karta(idKarty, pin, new BigDecimal(saldo));
-		// Gdy (when): dodanie kartyę do klienta
+		// Gdy (when): dodanie karte do klienta
 		klient.dodajKarte(karta);
 		// Wtedy (then): karta powinna być dostępna i poprawnie zidentyfikowana
 		IKarta pobrana = klient.pobierzKarte(idKarty);

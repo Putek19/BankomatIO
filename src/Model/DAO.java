@@ -49,4 +49,12 @@ public class DAO implements IDAO {
 		_blokadyKart.put(aIdKarty, nowyStan);
 		return nowyStan;
 	}
+
+	public int pobierzLiczbeZdarzen() {
+		return _rejestrZdarzen.size();
+	}
+
+	public List<String> pobierzRejestrZdarzen() {
+		return new ArrayList<>(_rejestrZdarzen);
+	}
 }

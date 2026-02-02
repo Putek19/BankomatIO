@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20230503</FitNesseVersion>
+  <rootPath>FrontPage.BankomatIoSuite.TestMonitorowaniaBezpieczenstwa</rootPath>
+  <result>
+    <counts>
+      <right>2</right>
+      <wrong>2</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2026-02-02T10:41:24+01:00</date>
+    <runTimeInMillis>124</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.BankomatIoSuite.SetUp"&gt;.FrontPage.BankomatIoSuite.SetUp&lt;/a&gt; &lt;a href="FrontPage.BankomatIoSuite.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;testyfitnesse.SetUp&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Test przypadku użycia: Monitorowanie bezpieczeństwa - analiza obrazu i automatyczne blokowanie&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;testyfitnesse.TestMonitorowaniaBezpieczenstwa&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;strumienObrazow&lt;/td&gt;
+		&lt;td&gt;sprawdzCzyBankomatZablokowany?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;obraz_bezpieczny&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;obraz_normalny&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;obraz_zagrożenie&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;fals&lt;/span&gt;e] &lt;span class="fail"&gt;expected [&lt;span class="diff"&gt;tru&lt;/span&gt;e]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;symulacja_zagrożenie&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;fals&lt;/span&gt;e] &lt;span class="fail"&gt;expected [&lt;span class="diff"&gt;tru&lt;/span&gt;e]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestMonitorowaniaBezpieczenstwa</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='testyfitnesse.SetUp', args=[]}</instruction>
+        <slimResult>pass(testyfitnesse.SetUp)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>testyfitnesse.SetUp</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='testyfitnesse.TestMonitorowaniaBezpieczenstwa', args=[]}</instruction>
+        <slimResult>pass(testyfitnesse.TestMonitorowaniaBezpieczenstwa)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>testyfitnesse.TestMonitorowaniaBezpieczenstwa</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_4', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[obraz_bezpieczny]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_4</instructionId>
+          <col>0</col>
+          <row>2</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_6', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_6</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_8', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[obraz_normalny]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_8</instructionId>
+          <col>0</col>
+          <row>3</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_10', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_10</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_12', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[obraz_zagrożenie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_12</instructionId>
+          <col>0</col>
+          <row>4</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_14', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>fail(a=false;e=true)</slimResult>
+        <expectation>
+          <status>fail</status>
+          <instructionId>decisionTable_1_14</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <actual>false</actual>
+          <expected>true</expected>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_16', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[symulacja_zagrożenie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <instructionId>decisionTable_1_16</instructionId>
+          <col>0</col>
+          <row>5</row>
+          <type>VoidReturnExpectation</type>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_18', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>fail(a=false;e=true)</slimResult>
+        <expectation>
+          <status>fail</status>
+          <instructionId>decisionTable_1_18</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ReturnedValueExpectation</type>
+          <actual>false</actual>
+          <expected>true</expected>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem>slim:fitnesse.slim.SlimService</testSystem>
+    <command>java -Djava.security.manager=allow --add-opens java.base/java.lang=ALL-UNNAMED -cp /Users/daniel/Desktop/io/BankomatIO/target/classes:/Users/daniel/Desktop/io/BankomatIO/target/test-classes:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-suite-engine-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/htmlparser-2.1.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/velocity-engine-core-2.3.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-api-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/objenesis-3.3.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/mockito-junit-jupiter-5.8.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-suite-api-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-params-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/byte-buddy-agent-1.14.10.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-launcher-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/byte-buddy-1.14.10.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/slf4j-api-2.0.7.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-commons-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/json-20230227.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-engine-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/apiguardian-api-1.1.2.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/opentest4j-1.3.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/diffutils-1.3.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/slf4j-jdk14-2.0.7.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/commons-lang3-3.12.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/htmllexer-2.1.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/mockito-core-5.8.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-platform-suite-commons-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/junit-jupiter-engine-5.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/commons-text-1.10.0.jar:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar fitnesse.slim.SlimService 1</command>
+    <exitCode>0</exitCode>
+    <stdOut>WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by fitnesse.slim.instructions.SystemExitSecurityManager (file:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar)
+WARNING: Please consider reporting this to the maintainers of fitnesse.slim.instructions.SystemExitSecurityManager
+WARNING: System::setSecurityManager will be removed in a future release
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>379</totalRunTimeInMillis>
+</testResults>
+

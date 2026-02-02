@@ -105,4 +105,13 @@ public class Model implements IModel {
 	public boolean czyBankomatZablokowany() {
 		return _bankomatZablokowany;
 	}
+
+	public void odblokujBankomat() {
+		_bankomatZablokowany = false;
+		zarejestrujZdarzenie("Bankomat został odblokowany");
+	}
+
+	public Inwentarz pobierzInwentarz() {
+		return _inwentarz;
+	}
 }

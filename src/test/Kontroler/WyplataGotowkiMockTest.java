@@ -18,10 +18,6 @@ import static org.mockito.Mockito.*;
 
 import java.math.BigDecimal;
 
-/**
- * Testy jednostkowe klasy WyplataGotowki z użyciem Mockito.
- * Testowane operacje zależą od IModel, który jest symulowany.
- */
 @DisplayName("WyplataGotowkiMockTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Tag("kontroler")

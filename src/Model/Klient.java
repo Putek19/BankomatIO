@@ -54,4 +54,12 @@ public class Klient implements IKlient {
 	public void ustawPesel(int aPesel) {
 		_pesel = aPesel;
 	}
+
+	public int ileKart() {
+		return _karty.size();
+	}
+
+	public List<IKarta> pobierzWszystkieKarty() {
+		return _karty;
+	}
 }

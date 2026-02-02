@@ -1,0 +1,8 @@
+!define TEST_SYSTEM {slim}
+!define COMMAND_PATTERN {java -Djava.security.manager=allow --add-opens java.base/java.lang=ALL-UNNAMED -cp %p %m}
+
+Testy akceptacyjne systemu bankomatu
+
+!path /Users/daniel/Desktop/io/BankomatIO/target/classes
+!path /Users/daniel/Desktop/io/BankomatIO/target/test-classes
+!path /Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/*

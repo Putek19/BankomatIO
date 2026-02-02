@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20230503</FitNesseVersion>
+  <rootPath>FrontPage.BankomatIoSuite.TestMonitorowaniaBezpieczenstwa</rootPath>
+  <result>
+    <counts>
+      <right>6</right>
+      <wrong>2</wrong>
+      <ignores>0</ignores>
+      <exceptions>4</exceptions>
+    </counts>
+    <date>2026-02-02T10:26:13+01:00</date>
+    <runTimeInMillis>153</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="FrontPage.BankomatIoSuite.SetUp"&gt;.FrontPage.BankomatIoSuite.SetUp&lt;/a&gt; &lt;a href="FrontPage.BankomatIoSuite.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;testyfitnesse.SetUp&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;Test przypadku użycia: Monitorowanie bezpieczeństwa - analiza obrazu i automatyczne blokowanie&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td colspan="3"&gt;&lt;span class="pass"&gt;testyfitnesse.TestMonitorowaniaBezpieczenstwa&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;strumienObrazow&lt;/td&gt;
+		&lt;td&gt;analizujObraz?&lt;/td&gt;
+		&lt;td&gt;sprawdzCzyBankomatZablokowany?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;obraz_bezpieczny &lt;span class="error"&gt;No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+analizujObraz() -&amp;gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+sprawdzCzyBankomatZablokowany() -&amp;gt; boolean
+sprawdzCzyMonitoringAktywny() -&amp;gt; boolean
+toString() -&amp;gt; class java.lang.String
+uruchomMonitoring() -&amp;gt; boolean
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;obraz_normalny &lt;span class="error"&gt;No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+analizujObraz() -&amp;gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+sprawdzCzyBankomatZablokowany() -&amp;gt; boolean
+sprawdzCzyMonitoringAktywny() -&amp;gt; boolean
+toString() -&amp;gt; class java.lang.String
+uruchomMonitoring() -&amp;gt; boolean
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor1"&gt;
+		&lt;td&gt;obraz_zagrożenie &lt;span class="error"&gt;No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+analizujObraz() -&amp;gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+sprawdzCzyBankomatZablokowany() -&amp;gt; boolean
+sprawdzCzyMonitoringAktywny() -&amp;gt; boolean
+toString() -&amp;gt; class java.lang.String
+uruchomMonitoring() -&amp;gt; boolean
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;fals&lt;/span&gt;e] &lt;span class="fail"&gt;expected [&lt;span class="diff"&gt;tru&lt;/span&gt;e]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;symulacja_napadu &lt;span class="error"&gt;No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&amp;gt; void
+analizujObraz() -&amp;gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&amp;gt; class java.lang.Object
+camel(java.lang.String) -&amp;gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+counts() -&amp;gt; class java.lang.String
+doCell(fit.Parse, int) -&amp;gt; void
+doCells(fit.Parse) -&amp;gt; void
+doRow(fit.Parse) -&amp;gt; void
+doRows(fit.Parse) -&amp;gt; void
+doTable(fit.Parse) -&amp;gt; void
+doTables(fit.Parse) -&amp;gt; void
+equals(java.lang.Object) -&amp;gt; boolean
+escape(java.lang.String) -&amp;gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&amp;gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&amp;gt; void
+execute() -&amp;gt; void
+getArgs() -&amp;gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&amp;gt; void
+getClass() -&amp;gt; class java.lang.Class
+getSymbol(java.lang.String) -&amp;gt; class java.lang.Object
+gray(java.lang.String) -&amp;gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&amp;gt; void
+hasParseMethod(java.lang.Class) -&amp;gt; boolean
+hasSymbol(java.lang.String) -&amp;gt; boolean
+hashCode() -&amp;gt; int
+ignore(fit.Parse) -&amp;gt; void
+isFriendlyException(java.lang.Throwable) -&amp;gt; boolean
+label(java.lang.String) -&amp;gt; class java.lang.String
+loadFixture(java.lang.String) -&amp;gt; class fit.Fixture
+notify() -&amp;gt; void
+notifyAll() -&amp;gt; void
+parse(java.lang.String, java.lang.Class) -&amp;gt; class java.lang.Object
+reset() -&amp;gt; void
+right(fit.Parse) -&amp;gt; void
+setForcedAbort(boolean) -&amp;gt; void
+setSymbol(java.lang.String, java.lang.Object) -&amp;gt; void
+sprawdzCzyBankomatZablokowany() -&amp;gt; boolean
+sprawdzCzyMonitoringAktywny() -&amp;gt; boolean
+toString() -&amp;gt; class java.lang.String
+uruchomMonitoring() -&amp;gt; boolean
+wait() -&amp;gt; void
+wait(long) -&amp;gt; void
+wait(long, int) -&amp;gt; void
+wrong(fit.Parse) -&amp;gt; void
+wrong(fit.Parse, java.lang.String) -&amp;gt; void&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;fals&lt;/span&gt;e] &lt;span class="fail"&gt;expected [&lt;span class="diff"&gt;tru&lt;/span&gt;e]&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;false&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>TestMonitorowaniaBezpieczenstwa</relativePageName>
+    <instructions>
+      <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='testyfitnesse.SetUp', args=[]}</instruction>
+        <slimResult>pass(testyfitnesse.SetUp)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_0_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>testyfitnesse.SetUp</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_0', instruction='make', instanceName='decisionTable_1', className='testyfitnesse.TestMonitorowaniaBezpieczenstwa', args=[]}</instruction>
+        <slimResult>pass(testyfitnesse.TestMonitorowaniaBezpieczenstwa)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_0</instructionId>
+          <col>0</col>
+          <row>0</row>
+          <type>ConstructionExpectation</type>
+          <evaluationMessage>testyfitnesse.TestMonitorowaniaBezpieczenstwa</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_4', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[obraz_bezpieczny]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_4</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&gt; void
+analizujObraz() -&gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+sprawdzCzyBankomatZablokowany() -&gt; boolean
+sprawdzCzyMonitoringAktywny() -&gt; boolean
+toString() -&gt; class java.lang.String
+uruchomMonitoring() -&gt; boolean
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_6', instruction='call', instanceName='decisionTable_1', methodName='analizujObraz', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_6</instructionId>
+          <col>1</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_7', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_7</instructionId>
+          <col>2</col>
+          <row>2</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_9', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[obraz_normalny]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_9</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&gt; void
+analizujObraz() -&gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+sprawdzCzyBankomatZablokowany() -&gt; boolean
+sprawdzCzyMonitoringAktywny() -&gt; boolean
+toString() -&gt; class java.lang.String
+uruchomMonitoring() -&gt; boolean
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_11', instruction='call', instanceName='decisionTable_1', methodName='analizujObraz', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_11</instructionId>
+          <col>1</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_12', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_12</instructionId>
+          <col>2</col>
+          <row>3</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_14', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[obraz_zagrożenie]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_14</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&gt; void
+analizujObraz() -&gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+sprawdzCzyBankomatZablokowany() -&gt; boolean
+sprawdzCzyMonitoringAktywny() -&gt; boolean
+toString() -&gt; class java.lang.String
+uruchomMonitoring() -&gt; boolean
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_16', instruction='call', instanceName='decisionTable_1', methodName='analizujObraz', args=[]}</instruction>
+        <slimResult>fail(a=false;e=true)</slimResult>
+        <expectation>
+          <status>fail</status>
+          <instructionId>decisionTable_1_16</instructionId>
+          <col>1</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <actual>false</actual>
+          <expected>true</expected>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_17', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_17</instructionId>
+          <col>2</col>
+          <row>4</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_19', instruction='call', instanceName='decisionTable_1', methodName='setStrumienObrazow', args=[symulacja_napadu]}</instruction>
+        <slimResult></slimResult>
+        <expectation>
+          <status>error</status>
+          <instructionId>decisionTable_1_19</instructionId>
+          <type>VoidReturnExpectation</type>
+          <evaluationMessage>No Method setStrumienObrazow[1] in class testyfitnesse.TestMonitorowaniaBezpieczenstwa.
+ Available methods:
+ClearSymbols() -&gt; void
+analizujObraz() -&gt; boolean
+callParseMethod(java.lang.Class, java.lang.String) -&gt; class java.lang.Object
+camel(java.lang.String) -&gt; class java.lang.String
+check(fit.Parse, fit.TypeAdapter) -&gt; void
+counts() -&gt; class java.lang.String
+doCell(fit.Parse, int) -&gt; void
+doCells(fit.Parse) -&gt; void
+doRow(fit.Parse) -&gt; void
+doRows(fit.Parse) -&gt; void
+doTable(fit.Parse) -&gt; void
+doTables(fit.Parse) -&gt; void
+equals(java.lang.Object) -&gt; boolean
+escape(java.lang.String) -&gt; class java.lang.String
+escape(java.lang.String, char, java.lang.String) -&gt; class java.lang.String
+exception(fit.Parse, java.lang.Throwable) -&gt; void
+execute() -&gt; void
+getArgs() -&gt; class [Ljava.lang.String;
+getArgsForTable(fit.Parse) -&gt; void
+getClass() -&gt; class java.lang.Class
+getSymbol(java.lang.String) -&gt; class java.lang.Object
+gray(java.lang.String) -&gt; class java.lang.String
+handleBlankCell(fit.Parse, fit.TypeAdapter) -&gt; void
+hasParseMethod(java.lang.Class) -&gt; boolean
+hasSymbol(java.lang.String) -&gt; boolean
+hashCode() -&gt; int
+ignore(fit.Parse) -&gt; void
+isFriendlyException(java.lang.Throwable) -&gt; boolean
+label(java.lang.String) -&gt; class java.lang.String
+loadFixture(java.lang.String) -&gt; class fit.Fixture
+notify() -&gt; void
+notifyAll() -&gt; void
+parse(java.lang.String, java.lang.Class) -&gt; class java.lang.Object
+reset() -&gt; void
+right(fit.Parse) -&gt; void
+setForcedAbort(boolean) -&gt; void
+setSymbol(java.lang.String, java.lang.Object) -&gt; void
+sprawdzCzyBankomatZablokowany() -&gt; boolean
+sprawdzCzyMonitoringAktywny() -&gt; boolean
+toString() -&gt; class java.lang.String
+uruchomMonitoring() -&gt; boolean
+wait() -&gt; void
+wait(long) -&gt; void
+wait(long, int) -&gt; void
+wrong(fit.Parse) -&gt; void
+wrong(fit.Parse, java.lang.String) -&gt; void</evaluationMessage>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_21', instruction='call', instanceName='decisionTable_1', methodName='analizujObraz', args=[]}</instruction>
+        <slimResult>fail(a=false;e=true)</slimResult>
+        <expectation>
+          <status>fail</status>
+          <instructionId>decisionTable_1_21</instructionId>
+          <col>1</col>
+          <row>5</row>
+          <type>ReturnedValueExpectation</type>
+          <actual>false</actual>
+          <expected>true</expected>
+        </expectation>
+      </instructionResult>
+      <instructionResult>
+        <instruction>{id='decisionTable_1_22', instruction='call', instanceName='decisionTable_1', methodName='sprawdzCzyBankomatZablokowany', args=[]}</instruction>
+        <slimResult>pass(false)</slimResult>
+        <expectation>
+          <status>pass</status>
+          <instructionId>decisionTable_1_22</instructionId>
+          <col>2</col>
+          <row>5</row>
+          <type>ReturnedValueExpectation</type>
+          <evaluationMessage>false</evaluationMessage>
+        </expectation>
+      </instructionResult>
+    </instructions>
+  </result>
+  <executionLog>
+    <testSystem></testSystem>
+    <command></command>
+    <exitCode>0</exitCode>
+    <stdOut>WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by fitnesse.slim.instructions.SystemExitSecurityManager (file:/Users/daniel/Desktop/io/BankomatIO/target/fitnesse-libs/fitnesse-20230503.jar)
+WARNING: Please consider reporting this to the maintainers of fitnesse.slim.instructions.SystemExitSecurityManager
+WARNING: System::setSecurityManager will be removed in a future release
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>153</totalRunTimeInMillis>
+</testResults>
+

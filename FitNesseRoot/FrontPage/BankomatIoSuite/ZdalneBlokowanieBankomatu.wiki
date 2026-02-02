@@ -1,0 +1,13 @@
+---
+Test
+---
+Test przypadku użycia: Zdalne blokowanie bankomatu przez administratora
+
+!|testyfitnesse.TestZdalnegoBlokowania|
+|zablokujBankomatZdalnie?|sprawdzCzyBankomatZablokowany?|
+|true                     |true                          |
+
+Odblokowanie dla kolejnych testów:
+!|testyfitnesse.TestZdalnegoBlokowania|
+|odblokujBankomat?|sprawdzCzyBankomatZablokowany?|
+|true             |false                         |

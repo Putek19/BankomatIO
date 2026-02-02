@@ -15,12 +15,6 @@ import org.mockito.InOrder;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-/**
- * Testy jednostkowe klasy WeryfikacjaTozsamosci z użyciem Mockito.
- * Testowane operacje zależą od IModel, który jest symulowany.
- * Strategia zabezpieczenia używa konkretnej implementacji ZablokowanieKarty
- * z wstrzykniętym mockiem IModel.
- */
 @DisplayName("WeryfikacjaTozsamosciMockTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Tag("kontroler")

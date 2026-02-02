@@ -1,0 +1,12 @@
+|FrontPage.BankomatIoSuite.TestMonitorowaniaBezpieczenstwa||10:41:44 Mon, Feb 02, 2026|
+|FrontPage.BankomatIoSuite.TestWeryfikacjiTozsamosci||10:35:02 Mon, Feb 02, 2026|
+|FrontPage.BankomatIoSuite.ZdalneBlokowanieBankomatu||10:26:07 Mon, Feb 02, 2026|
+|FrontPage.BankomatIoSuite.TestWyplataGotowki||10:23:30 Mon, Feb 02, 2026|
+|FrontPage.BankomatIoSuite.SetUp||10:23:09 Mon, Feb 02, 2026|
+|FrontPage.BankomatIoSuite||10:22:45 Mon, Feb 02, 2026|
+|FrontPage.BankomatIO||10:13:10 Mon, Feb 02, 2026|
+|FrontPage.BankomatIO.TestWyplataGotowki||10:11:00 Mon, Feb 02, 2026|
+|FrontPage||10:09:52 Mon, Feb 02, 2026|
+|FrontPage.SetUp||10:04:32 Mon, Feb 02, 2026|
+|FrontPage.setup2||10:02:29 Mon, Feb 02, 2026|
+|FrontPage.TestWyplatyGotowki||09:59:49 Mon, Feb 02, 2026|

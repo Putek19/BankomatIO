@@ -1,7 +1,4 @@
 #!/bin/bash
-
-# Skrypt do uruchamiania testów JUnit 5 z Mockito
-
 set -e
 
 JUNIT_VERSION="1.10.0"

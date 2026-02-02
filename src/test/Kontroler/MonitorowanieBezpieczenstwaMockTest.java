@@ -16,10 +16,6 @@ import org.mockito.InOrder;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-/**
- * Testy jednostkowe klasy MonitorowanieBezpieczenstwa z użyciem Mockito.
- * Testowane operacje zależą od IModel, który jest symulowany.
- */
 @DisplayName("MonitorowanieBezpieczenstwaMockTest")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Tag("kontroler")

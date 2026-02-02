@@ -1,0 +1,9 @@
+Test przypadku użycia: Weryfikacja tożsamości - sprawdzanie PIN karty
+
+!|testyfitnesse.TestWeryfikacjiTozsamosci|
+|idKarty|pin |weryfikujTozsamosc?|sprawdzCzyKartaJestAktywna?|sprawdzSaldoKarty?|
+|1001   |1234|true               |true                        |1000.0            |
+|1002   |5678|true               |true                        |500.0             |
+|1003   |9999|true               |true                        |2500.0            |
+|1001   |0000|false              |true                        |1000.0            |
+|9999   |1234|false              |false                       |0.0               |

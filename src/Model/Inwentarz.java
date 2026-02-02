@@ -51,4 +51,15 @@ public class Inwentarz {
 			_klienci.add(aKlient);
 		}
 	}
+
+	public int ileKlientow() {
+		return _klienci.size();
+	}
+
+	public IKlient pobierzOstatniegoDodanegoKlienta() {
+		if (_klienci.isEmpty()) {
+			return null;
+		}
+		return _klienci.get(_klienci.size() - 1);
+	}
 }

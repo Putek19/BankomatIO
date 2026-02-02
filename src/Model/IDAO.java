@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.List;
+
 public interface IDAO {
 
 	public void dodajWpisDoRejestruZdarzen(String aZdarzenie);
@@ -13,4 +15,8 @@ public interface IDAO {
 	public void usunKlienta(int aNrKlienta);
 
 	public boolean zmianaBlokadyKarty(int aIdKarty);
+
+	public int pobierzLiczbeZdarzen();
+
+	public List<String> pobierzRejestrZdarzen();
 }
